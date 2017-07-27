@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+      <!-- GLOBAL -->
+
+      <template id="assets_backend" name="bedit_ecole_assets" inherit_id="web.assets_backend">
+          <xpath expr="." position="inside">
+              <script type="text/javascript" src="/signalisation/static/src/js/bedit_ecole.js"/>
+          </xpath>
+      </template>
+
+    </data>
+</odoo>
