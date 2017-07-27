@@ -38,7 +38,7 @@ class company(geo_model.GeoModel):
     _order = 'name asc'
     _description = 'Company'
 
-    name = fields.Char(string='Name',required=False)
+    name = fields.Char(string='Name',required=True)
     address = fields.Char(string='Address', required=False)
     polnum = fields.Char(string='Polnum', required=False)
 
@@ -52,7 +52,7 @@ class school(geo_model.GeoModel):
     _order = 'name asc'
     _description = 'School'
 
-    name = fields.Char(string='Name',required=False)
+    name = fields.Char(string='Name',required=True)
     address = fields.Char(string='Address', required=False)
     polnum = fields.Char(string='Polnum', required=False)
 
@@ -68,7 +68,15 @@ class activity(models.Model):
     _description = 'Activity'
 
     description = fields.Char(string='Description', size=50)
-    year = fields.Integer(string="Year")#TODO add min/max val
-    school = fields.Many2one('bedit_ecole.school', string="School")
-    company = fields.Many2one('bedit_ecole.company', string="Company")
+    year = fields.Integer(string="Year", required=True)#TODO add min/max val
+    school_id = fields.Many2one('bedit_ecole.school', string="School", required=True)
+    company_id = fields.Many2one('bedit_ecole.company', string="Company", required=True)
     number = fields.Integer(string = 'number of participant')
+
+    @api.depends('school_id', 'company_id', 'year')
+    def _get_name(self):
+        for record in self:
+            name = '%s / %s (%d)' % (record.school_id, record.company_id, record.year)
+            record.name = name
+
+    name = fields.Char(compute='_get_name', store=True)

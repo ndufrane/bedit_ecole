@@ -2,76 +2,135 @@
 <odoo>
     <data>
 
-        <!-- CODE -->
+        <!-- municipality -->
 
-        <!-- explicit list view definition -->
-
-        <!-- Visualisation des codes -->
-        <record model="ir.ui.view" id="code_view_kanban">
-            <field name="name">signalisation.code.kanban</field>
-            <field name="model">signalisation.code</field>
+        <!-- Visualisation des municipalities -->
+        <record model="ir.ui.view" id="municipality_view">
+            <field name="name">bedit_ecole.municipality.tree</field>
+            <field name="model">bedit_ecole.municipality</field>
             <field name="arch" type="xml">
-                <kanban>
+                <tree string="Municipality">
                     <field name="name"/>
-                    <field name="description"/>
-                    <field name="img" widget="image" height="100"/>
-                    <field name="theme"/>
-                    <templates>
-                        <t t-name="kanban-box">
-                            <div class="oe_kanban_global_click">
-                                <!-- Image -->
-                                <div class="o_kanban_image">
-                                    <img t-att-src="kanban_image('signalisation.code', 'img', record.id.value)"/>
-                                </div>
-                                <!-- Contenu -->
-                                <div class="oe_kanban_details">
-                                    <strong>
-                                        <field name="name"/>
-                                    </strong>
-                                    <ul>
-                                        <li>
-                                            <t t-if="record.theme.raw_value"><field name="theme"/></t>
-                                        </li>
-                                        <li>
-                                            <t t-if="record.description.raw_value"><field name="description"/></t>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </t>
-                    </templates>
-                </kanban>
+                </tree>
             </field>
         </record>
 
-        <!-- Visualisation/Visualisation d'un code -->
-        <record model="ir.ui.view" id="code_view">
-            <field name="name">signalisation.code.form</field>
-            <field name="model">signalisation.code</field>
+        <!-- Visualisation/Modification d'un municipality -->
+        <record model="ir.ui.view" id="municipality_view">
+            <field name="name">bedit_ecole.municipality.form</field>
+            <field name="model">bedit_ecole.municipality</field>
             <field name="arch" type="xml">
-                <form string="Code Formulaire">
+                <form string="Municipality Form">
                     <sheet>
-                        <field name="img" widget='image' class="oe_avatar"/>
-                        <group col="2" string="Propriétés">
-                            <group>
-                                <field name="name" />
-                                <field name="description" />
-                                <field name="theme" />
-                            </group>
-                            <group>
-                                <field name="official" />
-                                <field name="type_info" />
-                            </group>
-                        </group>
+                        <field name="name"/>
                     </sheet>
                 </form>
             </field>
         </record>
 
         <!-- Modification de la toolbar de recherche dans la partie ajout/modification/suppretion -->
-        <record model="ir.ui.view" id="code_search_view">
-            <field name="name">signalisation.code.search</field>
-            <field name="model">signalisation.code</field>
+        <record model="ir.ui.view" id="municipality_search_view">
+            <field name="name">bedit_ecole.municipality.search</field>
+            <field name="model">bedit_ecole.municipality</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="municipality_list_action">
+            <field name="name">Municipalities</field>
+            <field name="res_model">bedit_ecole.municipality</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create first municipality</p><!-- Si pas de données messages d'info -->
+            </field>
+        </record>
+
+
+        <!-- postcode -->
+
+        <!-- Visualisation des postcode -->
+        <record model="ir.ui.view" id="postcode_view">
+            <field name="name">bedit_ecole.postcode.tree</field>
+            <field name="model">bedit_ecole.postcode</field>
+            <field name="arch" type="xml">
+                <tree string="Postcode">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Visualisation/Modification d'un postcode -->
+        <record model="ir.ui.view" id="postcode_view">
+            <field name="name">bedit_ecole.postcode.form</field>
+            <field name="model">bedit_ecole.postcode</field>
+            <field name="arch" type="xml">
+                <form string="Postcode Form">
+                    <sheet>
+                        <field name="name"/>
+                        <field name="description"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Modification de la toolbar de recherche dans la partie ajout/modification/suppretion -->
+        <record model="ir.ui.view" id="postcode_search_view">
+            <field name="name">bedit_ecole.postcode.search</field>
+            <field name="model">bedit_ecole.postcode</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="postcode_list_action">
+            <field name="name">Post Codes</field>
+            <field name="res_model">bedit_ecole.postcode</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create first post code</p><!-- Si pas de données messages d'info -->
+            </field>
+        </record>
+
+
+        <!-- school_type -->
+
+        <!-- Visualisation des school_type -->
+        <record model="ir.ui.view" id="school_type_view">
+            <field name="name">bedit_ecole.school_type.tree</field>
+            <field name="model">bedit_ecole.school_type</field>
+            <field name="arch" type="xml">
+                <tree string="School Type">
+                    <field name="name"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Visualisation/Modification d'un school_type -->
+        <record model="ir.ui.view" id="school_type_view">
+            <field name="name">bedit_ecole.school_type.form</field>
+            <field name="model">bedit_ecole.school_type</field>
+            <field name="arch" type="xml">
+                <form string="School Type Form">
+                    <sheet>
+                        <field name="name"/>
+                        <field name="description"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Modification de la toolbar de recherche dans la partie ajout/modification/suppretion -->
+        <record model="ir.ui.view" id="school_type_search_view">
+            <field name="name">bedit_ecole.school_type.search</field>
+            <field name="model">bedit_ecole.school_type</field>
             <field name="arch" type="xml">
                 <search>
                     <field name="name"/>
@@ -80,32 +139,33 @@
             </field>
         </record>
 
+        <record model="ir.actions.act_window" id="school_type_list_action">
+            <field name="name">School Types</field>
+            <field name="res_model">bedit_ecole.school_type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create first school type</p><!-- Si pas de données messages d'info -->
+            </field>
+        </record>
 
-        <!-- POTEAU -->
 
 
-        <!-- Visualisation des poteaux -->
-        <record model="ir.ui.view" id="poteau_view_kanban">
-            <field name="name">signalisation.poteau.kanban</field>
-            <field name="model">signalisation.poteau</field>
+
+        <!-- company -->
+
+        <!-- Visualisation des companies -->
+        <record model="ir.ui.view" id="company_view_kanban">
+            <field name="name">bedit_ecole.company.kanban</field>
+            <field name="model">bedit_ecole.company</field>
             <field name="arch" type="xml">
                 <kanban>
                     <field name="name"/>
-                    <field name="info"/>
-                    <field name="img" widget="image" height="100"/>
-                    <field name="action_id"/>
-                    <field name="tag_ids"/>
+                    <field name="address"/>
+                    <field name="polnum"/>
                     <templates>
                         <t t-name="kanban-box">
                             <div class="oe_kanban_global_click">
-                                <!-- Tag supperieur -->
-                                <div class="o_kanban_tags_section">
-                                    <field name="tag_ids"/>
-                                </div>
-                                <!-- Image -->
-                                <div class="o_kanban_image">
-                                    <img t-att-src="kanban_image('signalisation.poteau', 'img', record.id.value)"/>
-                                </div>
                                 <!-- Contenu -->
                                 <div class="oe_kanban_details">
                                     <strong>
@@ -113,21 +173,12 @@
                                     </strong>
                                     <ul>
                                         <li>
-                                            <t t-if="record.info.raw_value"><field name="info"/></t>
+                                            <t t-if="record.address.raw_value"><field name="address"/></t>
                                         </li>
                                         <li>
-                                            <t t-if="record.action_id.raw_value"><field name="action_id"/></t>
+                                            <t t-if="record.polnum.raw_value"><field name="polnum"/></t>
                                         </li>
                                     </ul>
-                                    <!-- Bouton d'action -->
-                                    <div class="o_kanban_button">
-                                        <!--<a t-if="record.contract_renewal_due_soon.raw_value and !record.contract_renewal_overdue.raw_value" data-type="object" data-name="return_action_to_open" href="#" class="oe_kanban_action btn btn-sm btn-warning" data-context='{"xml_id":"fleet_vehicle_log_contract_action"}'>
-                                            <field name="contract_renewal_name"/> <t t-if="record.contract_renewal_total.raw_value > 0"> and <field name="contract_renewal_total" /> other(s)</t>
-                                        </a>
-                                        <a t-if="record.contract_renewal_overdue.raw_value" data-type="object" data-name="return_action_to_open" href="#" class="oe_kanban_action btn btn-sm btn-danger" data-context='{"xml_id":"fleet_vehicle_log_contract_action"}'>
-                                            <field name="contract_renewal_name"/> <t t-if="record.contract_renewal_total.raw_value > 0"> and <field name="contract_renewal_total" /> other(s)</t>
-                                        </a>-->
-                                    </div>
                                 </div>
                             </div>
                         </t>
@@ -137,43 +188,36 @@
         </record>
 
         <!-- Modification de la toolbar de recherche dans la partie ajout/modification/suppretion -->
-        <record model="ir.ui.view" id="poteau_search_view">
-            <field name="name">signalisation.poteau.search</field>
-            <field name="model">signalisation.poteau</field>
+        <record model="ir.ui.view" id="company_search_view">
+            <field name="name">bedit_ecole.company.search</field>
+            <field name="model">bedit_ecole.company</field>
             <field name="arch" type="xml">
                 <search>
                     <field name="name"/>
-                    <field name="action_id"/>
-                    <field name="tag_ids"/>
+                    <field name="address"/>
+                    <field name="polnum"/>
+                    <field name="postcode_id"/>
+                    <field name="municipality_id"/>
                 </search>
             </field>
         </record>
 
-        <!-- Visualisation/Creation d'un poteau -->
-        <record model="ir.ui.view" id="poteau_form_view">
-            <field name="name">signalisation.poteau.form</field>
-            <field name="model">signalisation.poteau</field>
+        <!-- Visualisation/Creation d'un company -->
+        <record model="ir.ui.view" id="company_form_view">
+            <field name="name">bedit_ecole.company.form</field>
+            <field name="model">bedit_ecole.company</field>
             <field name="arch" type="xml">
-                <form string="Poteau Formulaire">
-                    <header>
-                        <field name="action_id"  widget="statusbar" clickable="True" />
-                    </header>
+                <form string="Company Form">
                     <sheet>
-                        <field name="img" widget='image' class="oe_avatar"/>
                         <div class="oe_title">
-                            <label for="tag_ids" class="oe_edit_only"/>
-                            <field name="tag_ids" widget="many2many_tags" options="{'no_create_edit': True}"/>
+                            <field name="name"/>
                         </div>
-                        <group col="2" string="Propriétés">
-                            <group string="General">
-                                <field name="name" />
-                                <field name="info" />
-                            </group>
-                            <group string="Autre">
-                                <field name="etat_id" />
-                                <field name="source_id" />
-                                <field name="poteau_type_id" />
-                                <field name="action_date" attrs="{'invisible':[('action_id', '==', 1)]}" />
+                        <group col="1" string="Properties">
+                            <group>
+                            <field name="address"/>
+                            <field name="polnum"/>
+                            <field name="municipality_id"/>
+                            <field name="postcode_id"/>
                             </group>
                         </group>
                         <group col="1">
@@ -181,240 +225,224 @@
                                 <field name="geom" colspan="4" widget="geo_edit_map"/>
                             </group>
                         </group>
-                        <group col="1">
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="company_list_action">
+            <field name="name">Companies</field>
+            <field name="res_model">bedit_ecole.company</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create first company</p><!-- Si pas de données messages d'info -->
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_company_kanban_view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="company_view_kanban"/>
+            <field name="act_window_id" ref="company_list_action"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_company_form_view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="company_form_view"/>
+            <field name="act_window_id" ref="company_list_action"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_company_geo_view">
+            <field eval="3" name="sequence"/>
+            <field name="view_mode">geoengine</field>
+            <field name="view_id" ref="ir_ui_view_companygeoview_lb72"/>
+            <field name="act_window_id" ref="company_list_action"/>
+        </record>
+
+
+
+        <!-- school -->
+
+        <!-- Visualisation des schools -->
+        <record model="ir.ui.view" id="school_view_kanban">
+            <field name="name">bedit_ecole.school.kanban</field>
+            <field name="model">bedit_ecole.school</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="name"/>
+                    <field name="address"/>
+                    <field name="polnum"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <!-- Contenu -->
+                                <div class="oe_kanban_details">
+                                    <strong>
+                                        <field name="name"/>
+                                    </strong>
+                                    <ul>
+                                        <li>
+                                            <t t-if="record.address.raw_value"><field name="address"/></t>
+                                        </li>
+                                        <li>
+                                            <t t-if="record.polnum.raw_value"><field name="polnum"/></t>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!-- Modification de la toolbar de recherche dans la partie ajout/modification/suppretion -->
+        <record model="ir.ui.view" id="school_search_view">
+            <field name="name">bedit_ecole.school.search</field>
+            <field name="model">bedit_ecole.school</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="address"/>
+                    <field name="polnum"/>
+                    <field name="postcode_id"/>
+                    <field name="municipality_id"/>
+                    <field name="stype_id"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Visualisation/Creation d'un school -->
+        <record model="ir.ui.view" id="school_form_view">
+            <field name="name">bedit_ecole.school.form</field>
+            <field name="model">bedit_ecole.school</field>
+            <field name="arch" type="xml">
+                <form string="School Form">
+                    <sheet>
+                        <div class="oe_title">
+                            <field name="name"/>
+                        </div>
+                        <group col="1" string="Properties">
                             <group>
-                                <field name="panneau_ids" colspan="3" domain="[('poteau_id', '=', parent.id)]">
-                                    <tree string="Panneaux">
-                                        <field name="code_id"/>
-                                        <field name="info"/>
-                                        <field name="action_id"/>
-                                    </tree>
-                                    <form string="Panneau Formulaire">
-                                        <sheet>
-                                            <group>
-                                                <field name="code_id"/>
-                                                <field name="info"/>
-                                                <field name="poteau_id" domain="[('id', '=', parent.id)]"/>
-                                            </group>
-                                        </sheet>
-                                    </form>
-                                </field>
+                            <field name="address"/>
+                            <field name="polnum"/>
+                            <field name="municipality_id"/>
+                            <field name="postcode_id"/>
+                            <field name="stype_id"/>
                             </group>
                         </group>
                         <group col="1">
-                            <group>
-                                <field name="attachment_ids" widget="many2many_binary"/>
+                            <group string="Cartographie">
+                                <field name="geom" colspan="4" widget="geo_edit_map"/>
                             </group>
-
                         </group>
                     </sheet>
                 </form>
             </field>
         </record>
 
-        <!-- Affichage en liste des poteau -->
-        <record model="ir.actions.act_window" id="poteau_list_action">
-            <field name="name">Poteaux</field>
-            <field name="res_model">signalisation.poteau</field>
+        <record model="ir.actions.act_window" id="school_list_action">
+            <field name="name">Schools</field>
+            <field name="res_model">bedit_ecole.school</field>
             <field name="view_type">form</field>
-            <field name="view_mode">kanban,form,geoengine</field>
+            <field name="view_mode">kanban,form</field>
             <field name="help" type="html">
-                <p class="oe_view_nocontent_create">Create the first panneau</p><!-- Si pas de données messages d'info -->
+                <p class="oe_view_nocontent_create">Create first school</p><!-- Si pas de données messages d'info -->
             </field>
         </record>
 
-        <record model="ir.actions.act_window.view" id="act_poteau_kanban_view">
+        <record model="ir.actions.act_window.view" id="act_school_kanban_view">
             <field eval="1" name="sequence"/>
             <field name="view_mode">kanban</field>
-            <field name="view_id" ref="poteau_view_kanban"/>
-            <field name="act_window_id" ref="poteau_list_action"/>
+            <field name="view_id" ref="school_view_kanban"/>
+            <field name="act_window_id" ref="school_list_action"/>
         </record>
 
-        <record model="ir.actions.act_window.view" id="act_poteau_form_view">
+        <record model="ir.actions.act_window.view" id="act_school_form_view">
             <field eval="2" name="sequence"/>
             <field name="view_mode">form</field>
-            <field name="view_id" ref="poteau_form_view"/>
-            <field name="act_window_id" ref="poteau_list_action"/>
+            <field name="view_id" ref="school_form_view"/>
+            <field name="act_window_id" ref="school_list_action"/>
         </record>
 
-        <record model="ir.actions.act_window.view" id="act_poteau_geo_view">
+        <record model="ir.actions.act_window.view" id="act_school_geo_view">
             <field eval="3" name="sequence"/>
             <field name="view_mode">geoengine</field>
-            <field name="view_id" ref="ir_ui_view_poteaugeoview_lb72"/>
-            <field name="act_window_id" ref="poteau_list_action"/>
+            <field name="view_id" ref="ir_ui_view_schoolgeoview_lb72"/>
+            <field name="act_window_id" ref="cschool_list_action"/>
         </record>
 
-        <!-- PANNEAU -->
 
-        <!-- Visualisation des panneaux -->
-        <record model="ir.ui.view" id="panneau_view">
-            <field name="name">signalisation.panneau.tree</field>
-            <field name="model">signalisation.panneau</field>
+        <!-- activity -->
+
+        <!-- Visualisation des activities -->
+        <record model="ir.ui.view" id="activity_view">
+            <field name="name">bedit_ecole.activity.tree</field>
+            <field name="model">bedit_ecole.activity</field>
             <field name="arch" type="xml">
-                <tree string="Panneaux">
-                    <field name="poteau_id"/>
-                    <field name="code_id"/>
-                    <field name="info"/>
+                <tree string="Activities">
+                    <field name="name"/>
                 </tree>
             </field>
         </record>
 
         <!-- Modification de la toolbar de recherche dans la partie ajout/modification/suppretion -->
-        <record model="ir.ui.view" id="panneau_search_view">
-            <field name="name">signalisation.panneau.search</field>
-            <field name="model">signalisation.panneau</field>
+        <record model="ir.ui.view" id="activity_search_view">
+            <field name="name">signalisation.activity.search</field>
+            <field name="model">signalisation.activity</field>
             <field name="arch" type="xml">
                 <search>
-                    <field name="code_id"/>
-                    <field name="poteau_id"/>
-                    <field name="action_id"/>
+                    <field name="description"/>
+                    <field name="year"/>
+                    <field name="school_id"/>
+                    <field name="company_id"/>
+                    <field name="number"/>
                 </search>
             </field>
         </record>
 
-        <!-- Visualisation/Creation d'un panneau -->
-        <record model="ir.ui.view" id="panneau_form_view">
-            <field name="name">signalisation.panneau.form</field>
-            <field name="model">signalisation.panneau</field>
+        <!-- Visualisation/Creation d'un activity -->
+        <record model="ir.ui.view" id="activity_form_view">
+            <field name="name">bedit_ecole.activity.form</field>
+            <field name="model">bedit_ecole.activity</field>
             <field name="arch" type="xml">
-                <form string="Panneau Formulaire">
+                <form string="Activity Form">
                     <sheet>
-                        <group>
-                            <field name="code_id"/>
-                            <field name="info"/>
-                            <field name="poteau_id"/>
-                            <field name="source_id"/>
-                            <field name="etat_id"/>
-                            <field name="action_id"/>
-                            <field name="action_date" attrs="{'invisible':[('action_id', '==', 1)]}" />
+                        <div class="oe_title">
+                            <field name="name"/>
+                        </div>
+                        <group col="1" string="Properties">
+                            <group>
+                            <field name="description"/>
+                            <field name="year"/>
+                            <field name="school_id"/>
+                            <field name="company_id"/>
+                            <field name="number"/>
+                            </group>
                         </group>
                     </sheet>
                 </form>
             </field>
         </record>
 
-
-        <!-- window action -->
-        <!-- https://www.odoo.com/documentation/10.0/reference/actions.html -->
-        <!--
-            The following tag is an action definition for a "window action",
-            that is an action opening a view or a set of views
-        -->
-        <!-- Affichage en liste des codes -->
-        <record model="ir.actions.act_window" id="code_list_action">
-            <field name="name">Codes</field>
-            <field name="res_model">signalisation.code</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">kanban,form</field>
-            <field name="help" type="html">
-                <p class="oe_view_nocontent_create">Créé le premier code</p><!-- Si pas de données messages d'info -->
-            </field>
-        </record>
-
-        <!-- Affichage en liste des panneau -->
-        <record model="ir.actions.act_window" id="panneau_list_action">
-            <field name="name">Panneaux</field>
-            <field name="res_model">signalisation.panneau</field>
+        <record model="ir.actions.act_window" id="activity_list_action">
+            <field name="name">Activities</field>
+            <field name="res_model">bedit_ecole.activity</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
             <field name="help" type="html">
-                <p class="oe_view_nocontent_create">Créé le premier poteau</p><!-- Si pas de données messages d'info -->
+                <p class="oe_view_nocontent_create">Create first activity</p><!-- Si pas de données messages d'info -->
             </field>
         </record>
 
-        <!-- Affichage en liste des poteau -->
-        <record model="ir.actions.act_window" id="poteau_list_action">
-            <field name="name">Poteaux</field>
-            <field name="res_model">signalisation.poteau</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">kanban,form</field>
-            <field name="help" type="html">
-                <p class="oe_view_nocontent_create">Créé le premier panneau</p><!-- Si pas de données messages d'info -->
-            </field>
+        <record model="ir.actions.act_window.view" id="act_activity_form_view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="activity_form_view"/>
+            <field name="act_window_id" ref="activity_list_action"/>
         </record>
 
-        <!-- Affichage en liste des sources -->
-        <record model="ir.actions.act_window" id="source_list_action">
-            <field name="name">Sources</field>
-            <field name="res_model">signalisation.source</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
-            <field name="help" type="html">
-                <p class="oe_view_nocontent_create">Créée la première source</p><!-- Si pas de données messages d'info -->
-            </field>
-        </record>
-
-        <!-- Affichage en liste des actions -->
-        <record model="ir.actions.act_window" id="action_list_action">
-            <field name="name">Actions</field>
-            <field name="res_model">signalisation.action</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
-            <field name="help" type="html">
-                <p class="oe_view_nocontent_create">Créée la première action</p><!-- Si pas de données messages d'info -->
-            </field>
-        </record>
-
-        <!-- Affichage en liste des etats -->
-        <record model="ir.actions.act_window" id="etat_list_action">
-            <field name="name">Etat</field>
-            <field name="res_model">signalisation.etat</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
-            <field name="help" type="html">
-                <p class="oe_view_nocontent_create">Créé le premier état</p><!-- Si pas de données messages d'info -->
-            </field>
-        </record>
-
-        <!-- Affichage en liste des types de poteaux -->
-        <record model="ir.actions.act_window" id="poteautype_list_action">
-            <field name="name">Type poteau</field>
-            <field name="res_model">signalisation.poteautype</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
-            <field name="help" type="html">
-                <p class="oe_view_nocontent_create">Créé le premier type de poteau</p><!-- Si pas de données messages d'info -->
-            </field>
-        </record>
-
-        <!-- Affichage en liste des tag -->
-        <record model="ir.actions.act_window" id="tag_list_action">
-            <field name="name">Tag</field>
-            <field name="res_model">signalisation.tag</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
-            <field name="help" type="html">
-                <p class="oe_view_nocontent_create">Créé le premier tag</p><!-- Si pas de données messages d'info -->
-            </field>
-        </record>
-
-        <record id="create_metadata" model="ir.actions.server">
-           <field name="name">Export file</field>
-           <field name="type">ir.actions.server</field>
-           <field name="model_id" ref="base.model_ir_attachment"/>
-           <field name="state">code</field>
-           <field name="code">
-att_id = record.id
-loc_id = env.ref('signalisation.location_filestore_signalisation').id
-task_id = env.ref('signalisation.filestore_export_task').id
-attachment_meta_obj = env['ir.attachment.metadata']
-
-attachment_meta_obj.create({
-    'attachment_id': att_id,
-    'file_type': 'export_external_location',
-    'state': 'pending',
-    'location_id': loc_id,
-    'task_id': task_id
-})
-           </field>
-        </record>
-
-        <record id="signalisation_create_attachement_rule" model="base.action.rule">
-            <field name="name">Rule when creating attachement in signalisation</field>
-            <field name="kind">on_create</field>
-            <field name="model_id" ref="base.model_ir_attachment"/>
-            <field name="server_action_ids" eval="[(4, ref('signalisation.create_metadata'))]"/>
-        </record>
-        
     </data>
 </odoo>

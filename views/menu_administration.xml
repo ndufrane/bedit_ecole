@@ -3,42 +3,32 @@
     <data>
 
         <!-- Panel global -->
-        <menuitem id="main_signalisation_menu" name="Signalisation" web_icon="signalisation,static/src/img/icon.png"/><!-- Titre -->
+        <menuitem id="main_bedit_ecole_menu" name="Bedit Ecole"/><!-- Titre -->
 
 
         <!-- Menu de gauche -->
 
-        <menuitem id="signalisation_menu" name="Signalisation"
-                parent="main_signalisation_menu"/><!-- Menu -->
+        <menuitem id="bedit_ecole_menu" name="Bedit Ecole"
+                parent="main_bedit_ecole_menu"/><!-- Menu -->
 
-        <menuitem id="poteaux_menu" name="Poteaux" parent="signalisation_menu"
-                action="poteau_list_action"/><!-- Sous-Menu -->
+        <menuitem id="school_menu" name="School" parent="bedit_ecole_menu"
+                action="school_list_action"/><!-- Sous-Menu -->
 
-        <menuitem id="panneaux_menu" name="Panneaux" parent="signalisation_menu"
-                action="panneau_list_action"/><!-- Sous-Menu -->
+        <menuitem id="company_menu" name="Company" parent="bedit_ecole_menu"
+                action="company_list_action"/><!-- Sous-Menu -->
 
-        <menuitem id="codes_menu" name="Codes" parent="signalisation_menu"
-                action="code_list_action"/><!-- Sous-Menu -->
+        <menuitem id="municipality_menu" name="Municipality" parent="bedit_ecole_menu"
+                action="municipality_list_action"/><!-- Sous-Menu -->
 
+        <menuitem id="postcode_menu" name="Postcode" parent="bedit_ecole_menu"
+                action="postcode_list_action"/><!-- Sous-Menu -->
 
+        <menuitem id="school_type_menu" name="SchoolType" parent="bedit_ecole_menu"
+                action="school_type_list_action"/><!-- Sous-Menu -->
 
-        <menuitem id="vocabulaire_menu" name="Autre"
-                parent="main_signalisation_menu"/><!-- Menu -->
+        <menuitem id="activity_menu" name="Activity" parent="bedit_ecole_menu"
+                action="activity_list_action"/><!-- Sous-Menu -->
 
-        <menuitem id="source_menu" name="Sources" parent="vocabulaire_menu"
-                action="source_list_action"/><!-- Sous-Menu -->
-
-        <menuitem id="action_menu" name="Actions" parent="vocabulaire_menu"
-                action="action_list_action"/><!-- Sous-Menu -->
-
-        <menuitem id="etat_menu" name="Etats" parent="vocabulaire_menu"
-                action="etat_list_action"/><!-- Sous-Menu -->
-
-        <menuitem id="poteautype_menu" name="Types" parent="vocabulaire_menu"
-                action="poteautype_list_action"/><!-- Sous-Menu -->
-
-        <menuitem id="tag_menu" name="Tags" parent="vocabulaire_menu"
-                action="tag_list_action"/><!-- Sous-Menu -->
 
     </data>
 </odoo>

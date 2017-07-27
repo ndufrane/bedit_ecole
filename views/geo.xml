@@ -44,7 +44,7 @@
           <field eval="1" name="overlay"/>
       </record>
 
-      <record id="ir_ui_view_poteaugeoview_lb72" model="ir.ui.view">
+      <record id="ir_ui_view_companygeoview_lb72" model="ir.ui.view">
         <field name="name">signalisation.poteau.geo_view_lb72</field>
         <field name="arch" type="xml">
           <geoengine>
@@ -61,7 +61,7 @@
       <record id="geoengine_vector_layer_72" model="geoengine.vector.layer">
         <field name="geo_field_id" ref="signalisation.field_signalisation_poteau_geom"/>
         <field name="name">Poteau</field>
-        <field name="view_id" ref="ir_ui_view_poteaugeoview_lb72"/>
+        <field name="view_id" ref="ir_ui_view_companygeoview_lb72"/>
         <field name="geo_repr">basic</field>
         <field name="attribute_field_id" ref="field_signalisation_poteau_name"/>
         <field name="begin_color">#FF680A</field>
@@ -71,7 +71,7 @@
           <field name="raster_type">wmts_cap</field>
           <field name="name">urbisFR</field>
           <field name="url">http://geoservices-urbis.irisnet.be/geoserver/gwc/service/wmts?REQUEST=GetCapabilities</field>
-          <field name="view_id" ref="ir_ui_view_poteaugeoview_lb72"/>
+          <field name="view_id" ref="ir_ui_view_companygeoview_lb72"/>
           <field name="projection">EPSG:31370</field>
           <field name="matrix_set">EPSG:31370</field>
           <field eval="0" name="overlay"/>
@@ -81,7 +81,7 @@
           <field name="raster_type">d_wms</field>
           <field name="name">urbisNL</field>
           <field name="url">http://geoservices-urbis.irisnet.be/geoserver/ows</field>
-          <field name="view_id" ref="ir_ui_view_poteaugeoview_lb72"/>
+          <field name="view_id" ref="ir_ui_view_companygeoview_lb72"/>
           <field name="projection">EPSG:31370</field>
           <field eval="1" name="overlay"/>
       </record>
