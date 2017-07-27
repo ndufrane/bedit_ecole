@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "bedit_ecole",
+    'name': "bedit_ecoles",
 
     'summary': """
         Modulle permetant la gestion d'écoles""",
@@ -29,7 +29,7 @@
         'security/data.xml',
         'security/ir.model.access.csv',
         'views/geo.xml',#Adding custom geo views
-        'views/bedit_ecole.xml',#Adding custom view/form for bedit_ecole
+        'views/bedit_ecoles.xml',#Adding custom view/form for bedit_ecoles
         'views/menu_administration.xml',#Adding custom administration menu
         'views/views.xml',
     ],

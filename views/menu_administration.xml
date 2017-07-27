@@ -3,30 +3,30 @@
     <data>
 
         <!-- Panel global -->
-        <menuitem id="main_bedit_ecole_menu" name="Bedit Ecole"/><!-- Titre -->
+        <menuitem id="main_bedit_ecoles_menu" name="Bedit Ecole"/><!-- Titre -->
 
 
         <!-- Menu de gauche -->
 
-        <menuitem id="bedit_ecole_menu" name="Bedit Ecole"
-                parent="main_bedit_ecole_menu"/><!-- Menu -->
+        <menuitem id="bedit_ecoles_menu" name="Bedit Ecole"
+                parent="main_bedit_ecoles_menu"/><!-- Menu -->
 
-        <menuitem id="school_menu" name="School" parent="bedit_ecole_menu"
+        <menuitem id="school_menu" name="School" parent="bedit_ecoles_menu"
                 action="school_list_action"/><!-- Sous-Menu -->
 
-        <menuitem id="company_menu" name="Company" parent="bedit_ecole_menu"
+        <menuitem id="company_menu" name="Company" parent="bedit_ecoles_menu"
                 action="company_list_action"/><!-- Sous-Menu -->
 
-        <menuitem id="municipality_menu" name="Municipality" parent="bedit_ecole_menu"
+        <menuitem id="municipality_menu" name="Municipality" parent="bedit_ecoles_menu"
                 action="municipality_list_action"/><!-- Sous-Menu -->
 
-        <menuitem id="postcode_menu" name="Postcode" parent="bedit_ecole_menu"
+        <menuitem id="postcode_menu" name="Postcode" parent="bedit_ecoles_menu"
                 action="postcode_list_action"/><!-- Sous-Menu -->
 
-        <menuitem id="school_type_menu" name="SchoolType" parent="bedit_ecole_menu"
+        <menuitem id="school_type_menu" name="SchoolType" parent="bedit_ecoles_menu"
                 action="school_type_list_action"/><!-- Sous-Menu -->
 
-        <menuitem id="activity_menu" name="Activity" parent="bedit_ecole_menu"
+        <menuitem id="activity_menu" name="Activity" parent="bedit_ecoles_menu"
                 action="activity_list_action"/><!-- Sous-Menu -->
 
 

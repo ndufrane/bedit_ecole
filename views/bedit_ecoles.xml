@@ -6,8 +6,8 @@
 
         <!-- Visualisation des municipalities -->
         <record model="ir.ui.view" id="municipality_view">
-            <field name="name">bedit_ecole.municipality.tree</field>
-            <field name="model">bedit_ecole.municipality</field>
+            <field name="name">bedit_ecoles.municipality.tree</field>
+            <field name="model">bedit_ecoles.municipality</field>
             <field name="arch" type="xml">
                 <tree string="Municipality">
                     <field name="name"/>
@@ -17,8 +17,8 @@
 
         <!-- Visualisation/Modification d'un municipality -->
         <record model="ir.ui.view" id="municipality_view">
-            <field name="name">bedit_ecole.municipality.form</field>
-            <field name="model">bedit_ecole.municipality</field>
+            <field name="name">bedit_ecoles.municipality.form</field>
+            <field name="model">bedit_ecoles.municipality</field>
             <field name="arch" type="xml">
                 <form string="Municipality Form">
                     <sheet>
@@ -30,8 +30,8 @@
 
         <!-- Modification de la toolbar de recherche dans la partie ajout/modification/suppretion -->
         <record model="ir.ui.view" id="municipality_search_view">
-            <field name="name">bedit_ecole.municipality.search</field>
-            <field name="model">bedit_ecole.municipality</field>
+            <field name="name">bedit_ecoles.municipality.search</field>
+            <field name="model">bedit_ecoles.municipality</field>
             <field name="arch" type="xml">
                 <search>
                     <field name="name"/>
@@ -41,7 +41,7 @@
 
         <record model="ir.actions.act_window" id="municipality_list_action">
             <field name="name">Municipalities</field>
-            <field name="res_model">bedit_ecole.municipality</field>
+            <field name="res_model">bedit_ecoles.municipality</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
             <field name="help" type="html">
@@ -54,8 +54,8 @@
 
         <!-- Visualisation des postcode -->
         <record model="ir.ui.view" id="postcode_view">
-            <field name="name">bedit_ecole.postcode.tree</field>
-            <field name="model">bedit_ecole.postcode</field>
+            <field name="name">bedit_ecoles.postcode.tree</field>
+            <field name="model">bedit_ecoles.postcode</field>
             <field name="arch" type="xml">
                 <tree string="Postcode">
                     <field name="name"/>
@@ -65,8 +65,8 @@
 
         <!-- Visualisation/Modification d'un postcode -->
         <record model="ir.ui.view" id="postcode_view">
-            <field name="name">bedit_ecole.postcode.form</field>
-            <field name="model">bedit_ecole.postcode</field>
+            <field name="name">bedit_ecoles.postcode.form</field>
+            <field name="model">bedit_ecoles.postcode</field>
             <field name="arch" type="xml">
                 <form string="Postcode Form">
                     <sheet>
@@ -79,8 +79,8 @@
 
         <!-- Modification de la toolbar de recherche dans la partie ajout/modification/suppretion -->
         <record model="ir.ui.view" id="postcode_search_view">
-            <field name="name">bedit_ecole.postcode.search</field>
-            <field name="model">bedit_ecole.postcode</field>
+            <field name="name">bedit_ecoles.postcode.search</field>
+            <field name="model">bedit_ecoles.postcode</field>
             <field name="arch" type="xml">
                 <search>
                     <field name="name"/>
@@ -90,7 +90,7 @@
 
         <record model="ir.actions.act_window" id="postcode_list_action">
             <field name="name">Post Codes</field>
-            <field name="res_model">bedit_ecole.postcode</field>
+            <field name="res_model">bedit_ecoles.postcode</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
             <field name="help" type="html">
@@ -103,8 +103,8 @@
 
         <!-- Visualisation des school_type -->
         <record model="ir.ui.view" id="school_type_view">
-            <field name="name">bedit_ecole.school_type.tree</field>
-            <field name="model">bedit_ecole.school_type</field>
+            <field name="name">bedit_ecoles.school_type.tree</field>
+            <field name="model">bedit_ecoles.school_type</field>
             <field name="arch" type="xml">
                 <tree string="School Type">
                     <field name="name"/>
@@ -115,8 +115,8 @@
 
         <!-- Visualisation/Modification d'un school_type -->
         <record model="ir.ui.view" id="school_type_view">
-            <field name="name">bedit_ecole.school_type.form</field>
-            <field name="model">bedit_ecole.school_type</field>
+            <field name="name">bedit_ecoles.school_type.form</field>
+            <field name="model">bedit_ecoles.school_type</field>
             <field name="arch" type="xml">
                 <form string="School Type Form">
                     <sheet>
@@ -129,8 +129,8 @@
 
         <!-- Modification de la toolbar de recherche dans la partie ajout/modification/suppretion -->
         <record model="ir.ui.view" id="school_type_search_view">
-            <field name="name">bedit_ecole.school_type.search</field>
-            <field name="model">bedit_ecole.school_type</field>
+            <field name="name">bedit_ecoles.school_type.search</field>
+            <field name="model">bedit_ecoles.school_type</field>
             <field name="arch" type="xml">
                 <search>
                     <field name="name"/>
@@ -141,7 +141,7 @@
 
         <record model="ir.actions.act_window" id="school_type_list_action">
             <field name="name">School Types</field>
-            <field name="res_model">bedit_ecole.school_type</field>
+            <field name="res_model">bedit_ecoles.school_type</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
             <field name="help" type="html">
@@ -156,8 +156,8 @@
 
         <!-- Visualisation des companies -->
         <record model="ir.ui.view" id="company_view_kanban">
-            <field name="name">bedit_ecole.company.kanban</field>
-            <field name="model">bedit_ecole.company</field>
+            <field name="name">bedit_ecoles.company.kanban</field>
+            <field name="model">bedit_ecoles.company</field>
             <field name="arch" type="xml">
                 <kanban>
                     <field name="name"/>
@@ -189,8 +189,8 @@
 
         <!-- Modification de la toolbar de recherche dans la partie ajout/modification/suppretion -->
         <record model="ir.ui.view" id="company_search_view">
-            <field name="name">bedit_ecole.company.search</field>
-            <field name="model">bedit_ecole.company</field>
+            <field name="name">bedit_ecoles.company.search</field>
+            <field name="model">bedit_ecoles.company</field>
             <field name="arch" type="xml">
                 <search>
                     <field name="name"/>
@@ -204,8 +204,8 @@
 
         <!-- Visualisation/Creation d'un company -->
         <record model="ir.ui.view" id="company_form_view">
-            <field name="name">bedit_ecole.company.form</field>
-            <field name="model">bedit_ecole.company</field>
+            <field name="name">bedit_ecoles.company.form</field>
+            <field name="model">bedit_ecoles.company</field>
             <field name="arch" type="xml">
                 <form string="Company Form">
                     <sheet>
@@ -232,7 +232,7 @@
 
         <record model="ir.actions.act_window" id="company_list_action">
             <field name="name">Companies</field>
-            <field name="res_model">bedit_ecole.company</field>
+            <field name="res_model">bedit_ecoles.company</field>
             <field name="view_type">form</field>
             <field name="view_mode">kanban,form</field>
             <field name="help" type="html">
@@ -267,8 +267,8 @@
 
         <!-- Visualisation des schools -->
         <record model="ir.ui.view" id="school_view_kanban">
-            <field name="name">bedit_ecole.school.kanban</field>
-            <field name="model">bedit_ecole.school</field>
+            <field name="name">bedit_ecoles.school.kanban</field>
+            <field name="model">bedit_ecoles.school</field>
             <field name="arch" type="xml">
                 <kanban>
                     <field name="name"/>
@@ -300,8 +300,8 @@
 
         <!-- Modification de la toolbar de recherche dans la partie ajout/modification/suppretion -->
         <record model="ir.ui.view" id="school_search_view">
-            <field name="name">bedit_ecole.school.search</field>
-            <field name="model">bedit_ecole.school</field>
+            <field name="name">bedit_ecoles.school.search</field>
+            <field name="model">bedit_ecoles.school</field>
             <field name="arch" type="xml">
                 <search>
                     <field name="name"/>
@@ -316,8 +316,8 @@
 
         <!-- Visualisation/Creation d'un school -->
         <record model="ir.ui.view" id="school_form_view">
-            <field name="name">bedit_ecole.school.form</field>
-            <field name="model">bedit_ecole.school</field>
+            <field name="name">bedit_ecoles.school.form</field>
+            <field name="model">bedit_ecoles.school</field>
             <field name="arch" type="xml">
                 <form string="School Form">
                     <sheet>
@@ -345,7 +345,7 @@
 
         <record model="ir.actions.act_window" id="school_list_action">
             <field name="name">Schools</field>
-            <field name="res_model">bedit_ecole.school</field>
+            <field name="res_model">bedit_ecoles.school</field>
             <field name="view_type">form</field>
             <field name="view_mode">kanban,form</field>
             <field name="help" type="html">
@@ -379,8 +379,8 @@
 
         <!-- Visualisation des activities -->
         <record model="ir.ui.view" id="activity_view">
-            <field name="name">bedit_ecole.activity.tree</field>
-            <field name="model">bedit_ecole.activity</field>
+            <field name="name">bedit_ecoles.activity.tree</field>
+            <field name="model">bedit_ecoles.activity</field>
             <field name="arch" type="xml">
                 <tree string="Activities">
                     <field name="name"/>
@@ -405,8 +405,8 @@
 
         <!-- Visualisation/Creation d'un activity -->
         <record model="ir.ui.view" id="activity_form_view">
-            <field name="name">bedit_ecole.activity.form</field>
-            <field name="model">bedit_ecole.activity</field>
+            <field name="name">bedit_ecoles.activity.form</field>
+            <field name="model">bedit_ecoles.activity</field>
             <field name="arch" type="xml">
                 <form string="Activity Form">
                     <sheet>
@@ -429,7 +429,7 @@
 
         <record model="ir.actions.act_window" id="activity_list_action">
             <field name="name">Activities</field>
-            <field name="res_model">bedit_ecole.activity</field>
+            <field name="res_model">bedit_ecoles.activity</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
             <field name="help" type="html">

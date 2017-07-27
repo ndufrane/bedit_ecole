@@ -3,24 +3,24 @@
       <!-- GeoEngine views -->
 
       <record id="ir_ui_view_companygeoview_lb72" model="ir.ui.view">
-        <field name="name">bedit_ecole.company.geo_view_lb72</field>
+        <field name="name">bedit_ecoles.company.geo_view_lb72</field>
         <field name="arch" type="xml">
           <geoengine>
             <field name="name"/>
           </geoengine>
         </field>
         <field eval="16" name="priority"/>
-        <field name="model">bedit_ecole.company</field>
+        <field name="model">bedit_ecoles.company</field>
         <field name="projection">EPSG:31370</field>
         <field name="default_extent">0, 0, 300000, 300000</field>
       </record>
 
       <record id="geoengine_vector_layer_72" model="geoengine.vector.layer">
-        <field name="geo_field_id" ref="bedit_ecole.field_bedit_ecole_company_geom"/>
+        <field name="geo_field_id" ref="bedit_ecoles.field_bedit_ecoles_company_geom"/>
         <field name="name">Company</field>
         <field name="view_id" ref="ir_ui_view_companygeoview_lb72"/>
         <field name="geo_repr">basic</field>
-        <field name="attribute_field_id" ref="field_bedit_ecole_company_name"/>
+        <field name="attribute_field_id" ref="field_bedit_ecoles_company_name"/>
         <field name="begin_color">#FF680A</field>
       </record>
 
@@ -46,7 +46,7 @@
 
 
       <record id="ir_ui_view_schoolgeoview_lb72" model="ir.ui.view">
-        <field name="name">bedit_ecole.school.geo_view_lb72</field>
+        <field name="name">bedit_ecoles.school.geo_view_lb72</field>
         <field name="arch" type="xml">
           <geoengine>
             <field name="name"/>
@@ -54,17 +54,17 @@
           </geoengine>
         </field>
         <field eval="16" name="priority"/>
-        <field name="model">bedit_ecole.school</field>
+        <field name="model">bedit_ecoles.school</field>
         <field name="projection">EPSG:31370</field>
         <field name="default_extent">0, 0, 300000, 300000</field>
       </record>
 
       <record id="geoengine_vector_layer_72" model="geoengine.vector.layer">
-        <field name="geo_field_id" ref="bedit_ecole.field_bedit_ecole_school_geom"/>
+        <field name="geo_field_id" ref="bedit_ecoles.field_bedit_ecoles_school_geom"/>
         <field name="name">School</field>
         <field name="view_id" ref="ir_ui_view_schoolgeoview_lb72"/>
         <field name="geo_repr">basic</field>
-        <field name="attribute_field_id" ref="field_bedit_ecole_school_name"/>
+        <field name="attribute_field_id" ref="field_bedit_ecoles_school_name"/>
         <field name="begin_color">#FF680A</field>
       </record>
 
