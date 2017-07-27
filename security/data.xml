@@ -1,0 +1,16 @@
+<openerp>
+    <data>
+
+        <record id="group_bedit_ecole_user" model="res.groups">
+            <field name="name">Bedit ecole user</field>
+            <field name="implied_ids" eval="[(4, ref('base_geoengine.group_geoengine_user')),]"/>
+        </record>
+
+        <record id="group_bedit_ecole_manager" model="res.groups">
+            <field name="name">Bedit ecole manager</field>
+            <field name="implied_ids" eval="[(4, ref('group_signalisation_user')),(4, ref('base_geoengine.group_geoengine_admin')),]"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+    </data>
+</openerp>

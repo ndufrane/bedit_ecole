@@ -1,0 +1,124 @@
+<odoo>
+    <data>
+        <!-- CODES -->
+        <record id="code_A1a" model="signalisation.code">
+            <field name="name">A1a</field>
+            <field name="official">true</field>
+            <field name="theme">Signaux de danger</field>
+            <field name="description">Virage dangereux à gauche.</field>
+            <field name="type_info">danger</field>
+            <field name="img" type="base64" file="signalisation/static/src/img/a1a.png"/>
+        </record>
+        <record id="code_A1b" model="signalisation.code">
+            <field name="name">A1b</field>
+            <field name="official">true</field>
+            <field name="theme">Signaux de danger</field>
+            <field name="description">Virage dangereux à droite.</field>
+            <field name="type_info">danger</field>
+            <field name="img" type="base64" file="signalisation/static/src/img/a1b.png"/>
+        </record>
+        <record id="code_A1c" model="signalisation.code">
+            <field name="name">A1c</field>
+            <field name="official">true</field>
+            <field name="theme">Signaux de danger</field>
+            <field name="description">Double virage ou succession de plus de deux virages, le premier à gauche.</field>
+            <field name="type_info">danger</field>
+            <field name="img" type="base64" file="signalisation/static/src/img/a1c.png"/>
+        </record>
+        <record id="code_A1d" model="signalisation.code">
+            <field name="name">A1d</field>
+            <field name="official">true</field>
+            <field name="theme">Signaux de danger</field>
+            <field name="description">Double virage ou succession de plus de deux virages, le premier à droite.</field>
+            <field name="type_info">danger</field>
+            <field name="img" type="base64" file="signalisation/static/src/img/a1d.png"/>
+        </record>
+        <record id="code_A3" model="signalisation.code">
+            <field name="name">A3</field>
+            <field name="official">true</field>
+            <field name="theme">Signaux de danger</field>
+            <field name="description">Descente dangereuse.</field>
+            <field name="type_info">danger</field>
+            <field name="img" type="base64" file="signalisation/static/src/img/a3.png"/>
+        </record>
+        <record id="code_A5" model="signalisation.code">
+            <field name="name">A5</field>
+            <field name="official">true</field>
+            <field name="theme">Signaux de danger</field>
+            <field name="description">Montée à forte inclinaison.</field>
+            <field name="type_info">danger</field>
+            <field name="img" type="base64" file="signalisation/static/src/img/a5.png"/>
+        </record>
+        <record id="code_B1" model="signalisation.code">
+            <field name="name">B1</field>
+            <field name="official">true</field>
+            <field name="theme">Signaux relatifs à la priorité</field>
+            <field name="description">Céder le passage.</field>
+            <field name="type_info">priorité</field>
+            <field name="img" type="base64" file="signalisation/static/src/img/b1.png"/>
+        </record>
+        <record id="code_B5" model="signalisation.code">
+            <field name="name">B5</field>
+            <field name="official">true</field>
+            <field name="theme">Signaux relatifs à la priorité</field>
+            <field name="description">Marquer l’arrêt et céder le passage.</field>
+            <field name="type_info">priorité</field>
+        </record>
+        <record id="code_B17" model="signalisation.code">
+            <field name="name">B17</field>
+            <field name="official">true</field>
+            <field name="theme">Signaux relatifs à la priorité</field>
+            <field name="description">Carrefour où la priorité de droite est applicable.</field>
+            <field name="type_info">priorité</field>
+            <field name="img" type="base64" file="signalisation/static/src/img/b17.png"/>
+        </record>
+        <!-- POTEAU -->
+        <record id="poteau0" model="signalisation.poteau">
+            <field name="name">Rue chapelles des clerc 3</field>
+            <field name="info">Poteau temporaire</field>
+            <field name="geom">POINT(620590.871570233 6558515.34796391)</field>
+            <field name="source_id" ref="source2"/>
+            <field name="etat_id" ref="etat0"/>
+            <field name="action_id" ref="action0"/>
+        </record>
+        <record id="poteau1" model="signalisation.poteau">
+            <field name="name">Rue chapelles des clerc 2</field>
+            <field name="info">Poteau temporaire</field>
+            <field name="geom">POINT(620546.557970395 6558490.06838069)</field>
+            <field name="source_id" ref="source2"/>
+            <field name="etat_id" ref="etat0"/>
+            <field name="action_id" ref="action0"/>
+            <field name="tag_ids" eval="[(6,None,[ref('signalisation.tag0'), ref('signalisation.tag2')])]"/>
+        </record>
+        <record id="poteau2" model="signalisation.poteau">
+            <field name="name">Boulevard du 2iem lancier</field>
+            <field name="info">Poteau temporaire</field>
+            <field name="geom">POINT(620642.104255753 6558813.68025506)</field>
+            <field name="source_id" ref="source0"/>
+            <field name="action_id" ref="action1"/>
+            <field name="etat_id" ref="etat3"/>
+            <field name="tag_ids" eval="[(6,None,[ref('signalisation.tag1')])]"/>
+        </record>
+        <!-- PANNEAU -->
+        <record id="panneau0" model="signalisation.panneau">
+            <field name="info">Temporaire</field>
+            <field name="code_id" ref="code_B1"/>
+            <field name="poteau_id" ref="poteau0"/>
+        </record>
+        <record id="panneau1" model="signalisation.panneau">
+            <field name="info">Temporaire</field>
+            <field name="code_id" ref="code_A1a"/>
+            <field name="poteau_id" ref="poteau0"/>
+        </record>
+        <record id="panneau2" model="signalisation.panneau">
+            <field name="info">Traveau</field>
+            <field name="code_id" ref="code_A1d"/>
+            <field name="poteau_id" ref="poteau1"/>
+        </record>
+        <record id="panneau3" model="signalisation.panneau">
+            <field name="info">Interdiction</field>
+            <field name="code_id" ref="code_B5"/>
+            <field name="poteau_id" ref="poteau2"/>
+        </record>
+    </data>
+</odoo>
