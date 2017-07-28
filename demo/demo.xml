@@ -1,50 +1,50 @@
 <odoo>
     <data>
-        
+
         <!-- municipality -->
-        <record id="municipality_and" model="signalisation.municipality">
+        <record id="municipality_and" model="bedit_ecoles.municipality">
             <field name="name">Anderlecht</field>
         </record>
-        <record id="municipality_bru" model="signalisation.municipality">
+        <record id="municipality_bru" model="bedit_ecoles.municipality">
             <field name="name">Bruxelles-Ville</field>
         </record>
-        <record id="municipality_for" model="signalisation.municipality">
+        <record id="municipality_for" model="bedit_ecoles.municipality">
             <field name="name">Forest</field>
         </record>
-        <record id="municipality_ixe" model="signalisation.municipality">
+        <record id="municipality_ixe" model="bedit_ecoles.municipality">
             <field name="name">Ixelles</field>
         </record>
-        <record id="municipality_sch" model="signalisation.municipality">
+        <record id="municipality_sch" model="bedit_ecoles.municipality">
             <field name="name">Schaerbeek</field>
         </record>
 
         <!-- postcode -->
-        <record id="postcode_and" model="signalisation.postcode">
+        <record id="postcode_and" model="bedit_ecoles.postcode">
             <field name="name">1070</field>
         </record>
-        <record id="postcode_bru" model="signalisation.postcode">
+        <record id="postcode_bru" model="bedit_ecoles.postcode">
             <field name="name">1000</field>
         </record>
-        <record id="postcode_for" model="signalisation.postcode">
+        <record id="postcode_for" model="bedit_ecoles.postcode">
             <field name="name">1190</field>
         </record>
-        <record id="postcode_ixe" model="signalisation.postcode">
+        <record id="postcode_ixe" model="bedit_ecoles.postcode">
             <field name="name">1050</field>
         </record>
-        <record id="postcode_sch" model="signalisation.postcode">
+        <record id="postcode_sch" model="bedit_ecoles.postcode">
             <field name="name">1030</field>
         </record>
 
         <!-- school_type -->
-        <record id="school_type_mat" model="signalisation.school_type">
+        <record id="school_type_mat" model="bedit_ecoles.school_type">
             <field name="name">Maternelle</field>
             <field name="description">Petite enfance</field>
         </record>
-        <record id="school_type_pri" model="signalisation.school_type">
+        <record id="school_type_pri" model="bedit_ecoles.school_type">
             <field name="name">Primaire</field>
             <field name="description">Jeune</field>
         </record>
-        <record id="school_type_sec" model="signalisation.school_type">
+        <record id="school_type_sec" model="bedit_ecoles.school_type">
             <field name="name">Secondaire</field>
             <field name="description">Adolescent</field>
         </record>

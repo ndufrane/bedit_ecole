@@ -16,7 +16,7 @@
       </record>
 
       <record id="geoengine_vector_layer_72" model="geoengine.vector.layer">
-        <field name="geo_field_id" ref="bedit_ecoles.field_bedit_ecoles_company_geom"/>
+        <field name="geo_field_id" ref="bedit_ecoles.field_bedit_ecoles_company_the_geom"/>
         <field name="name">Company</field>
         <field name="view_id" ref="ir_ui_view_companygeoview_lb72"/>
         <field name="geo_repr">basic</field>
@@ -50,7 +50,6 @@
         <field name="arch" type="xml">
           <geoengine>
             <field name="name"/>
-            <field name="info"/>
           </geoengine>
         </field>
         <field eval="16" name="priority"/>
@@ -60,7 +59,7 @@
       </record>
 
       <record id="geoengine_vector_layer_72" model="geoengine.vector.layer">
-        <field name="geo_field_id" ref="bedit_ecoles.field_bedit_ecoles_school_geom"/>
+        <field name="geo_field_id" ref="bedit_ecoles.field_bedit_ecoles_school_the_geom"/>
         <field name="name">School</field>
         <field name="view_id" ref="ir_ui_view_schoolgeoview_lb72"/>
         <field name="geo_repr">basic</field>

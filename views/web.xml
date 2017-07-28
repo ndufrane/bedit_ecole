@@ -6,7 +6,7 @@
 
       <template id="assets_backend" name="bedit_ecoles_assets" inherit_id="web.assets_backend">
           <xpath expr="." position="inside">
-              <script type="text/javascript" src="/signalisation/static/src/js/bedit_ecoles.js"/>
+              <script type="text/javascript" src="/bedit_ecoles/static/src/js/bedit_ecoles.js"/>
           </xpath>
       </template>
 

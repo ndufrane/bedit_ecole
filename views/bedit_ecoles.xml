@@ -5,7 +5,7 @@
         <!-- municipality -->
 
         <!-- Visualisation des municipalities -->
-        <record model="ir.ui.view" id="municipality_view">
+        <record model="ir.ui.view" id="municipality_view_tree">
             <field name="name">bedit_ecoles.municipality.tree</field>
             <field name="model">bedit_ecoles.municipality</field>
             <field name="arch" type="xml">
@@ -53,7 +53,7 @@
         <!-- postcode -->
 
         <!-- Visualisation des postcode -->
-        <record model="ir.ui.view" id="postcode_view">
+        <record model="ir.ui.view" id="postcode_view_tree">
             <field name="name">bedit_ecoles.postcode.tree</field>
             <field name="model">bedit_ecoles.postcode</field>
             <field name="arch" type="xml">
@@ -71,7 +71,6 @@
                 <form string="Postcode Form">
                     <sheet>
                         <field name="name"/>
-                        <field name="description"/>
                     </sheet>
                 </form>
             </field>
@@ -222,7 +221,7 @@
                         </group>
                         <group col="1">
                             <group string="Cartographie">
-                                <field name="geom" colspan="4" widget="geo_edit_map"/>
+                                <field name="the_geom" colspan="4" widget="geo_edit_map"/>
                             </group>
                         </group>
                     </sheet>
@@ -335,7 +334,7 @@
                         </group>
                         <group col="1">
                             <group string="Cartographie">
-                                <field name="geom" colspan="4" widget="geo_edit_map"/>
+                                <field name="the_geom" colspan="4" widget="geo_edit_map"/>
                             </group>
                         </group>
                     </sheet>
@@ -371,7 +370,7 @@
             <field eval="3" name="sequence"/>
             <field name="view_mode">geoengine</field>
             <field name="view_id" ref="ir_ui_view_schoolgeoview_lb72"/>
-            <field name="act_window_id" ref="cschool_list_action"/>
+            <field name="act_window_id" ref="school_list_action"/>
         </record>
 
 
@@ -390,8 +389,8 @@
 
         <!-- Modification de la toolbar de recherche dans la partie ajout/modification/suppretion -->
         <record model="ir.ui.view" id="activity_search_view">
-            <field name="name">signalisation.activity.search</field>
-            <field name="model">signalisation.activity</field>
+            <field name="name">bedit_ecoles.activity.search</field>
+            <field name="model">bedit_ecoles.activity</field>
             <field name="arch" type="xml">
                 <search>
                     <field name="description"/>
