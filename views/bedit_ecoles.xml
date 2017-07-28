@@ -436,12 +436,6 @@
             </field>
         </record>
 
-        <record model="ir.actions.act_window.view" id="act_activity_form_view">
-            <field eval="2" name="sequence"/>
-            <field name="view_mode">form</field>
-            <field name="view_id" ref="activity_form_view"/>
-            <field name="act_window_id" ref="activity_list_action"/>
-        </record>
 
     </data>
 </odoo>
