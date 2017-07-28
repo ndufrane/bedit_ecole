@@ -434,6 +434,7 @@
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">Create first activity</p><!-- Si pas de données messages d'info -->
             </field>
+            <field name= "context">{"search_default_year":2017}</field><!-- TODO: trouver l'année actuelle -->
         </record>
 
 
