@@ -256,7 +256,7 @@
         <record model="ir.actions.act_window.view" id="act_company_geo_view">
             <field eval="3" name="sequence"/>
             <field name="view_mode">geoengine</field>
-            <field name="view_id" ref="ir_ui_view_companygeoview_lb72"/>
+            <field name="view_id" ref="ir_ui_view_companygeoview0"/>
             <field name="act_window_id" ref="company_list_action"/>
         </record>
 
@@ -369,7 +369,7 @@
         <record model="ir.actions.act_window.view" id="act_school_geo_view">
             <field eval="3" name="sequence"/>
             <field name="view_mode">geoengine</field>
-            <field name="view_id" ref="ir_ui_view_schoolgeoview_lb72"/>
+            <field name="view_id" ref="ir_ui_view_schoolgeoview0"/>
             <field name="act_window_id" ref="school_list_action"/>
         </record>
 
