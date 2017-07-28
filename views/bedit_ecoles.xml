@@ -388,7 +388,7 @@
                 </tree>
             </field>
         </record>
-        
+
         <record model="ir.ui.view" id="activity_view_kaban">
             <field name="name">bedit_ecoles.activity.kanban</field>
             <field name="model">bedit_ecoles.activity</field>
@@ -430,7 +430,10 @@
                     <field name="description"/>
                     <field name="year"/>
                     <field name="school_id"/>
+                    <field name="school_muni"/>
+                    <field name="school_type"/>
                     <field name="company_id"/>
+                    <field name="school_muni"/>
                     <field name="number"/>
                 </search>
             </field>
