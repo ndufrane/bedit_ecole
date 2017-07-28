@@ -62,7 +62,7 @@ class school(geo_model.GeoModel):
     municipality_id = fields.Many2one('bedit_ecoles.municipality', string="Municipality")
     stype_id = fields.Many2one('bedit_ecoles.school_type', string="School type")
 
-class activity(models.Model):
+class activity(geo_model.GeoModel):
     _name = 'bedit_ecoles.activity'
     _order = 'name asc'
     _description = 'Activity'
@@ -97,3 +97,5 @@ class activity(models.Model):
     company_muni = fields.Char(related='company_id.municipality_id.name', store=False)
 
     school_type = fields.Char(related='school_id.stype_id.name', store=False)
+
+    the_geom = geo_fields.GeoPoint(related='school_id.the_geom', store=False)

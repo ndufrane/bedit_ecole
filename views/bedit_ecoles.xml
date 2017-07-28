@@ -467,11 +467,18 @@
             <field name="name">Activities</field>
             <field name="res_model">bedit_ecoles.activity</field>
             <field name="view_type">form</field>
-            <field name="view_mode">tree,kanban,form</field>
+            <field name="view_mode">tree,kanban,form,geoengine</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">Create first activity</p><!-- Si pas de données messages d'info -->
             </field>
             <field name= "context">{"search_default_year":2017}</field><!-- TODO: trouver l'année actuelle -->
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_activity_geo_view">
+            <field eval="3" name="sequence"/>
+            <field name="view_mode">geoengine</field>
+            <field name="view_id" ref="ir_ui_view_activitygeoview2"/>
+            <field name="act_window_id" ref="activity_list_action"/>
         </record>
 
 
