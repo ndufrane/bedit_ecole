@@ -5,7 +5,7 @@ from odoo import models, fields, api
 from odoo.addons.base_geoengine import geo_model
 from odoo.addons.base_geoengine import fields as geo_fields
 
-from datetime import timedelta
+from datetime import timedelta, date
 import json
 import logging
 
@@ -68,10 +68,22 @@ class activity(models.Model):
     _description = 'Activity'
 
     description = fields.Char(string='Description', size=50)
-    year = fields.Integer(string="Year", required=True)#TODO add min/max val
+
+    @api.model
+    def _year_between(self):
+        years = []
+        year_min = 2010
+        year_max = (date.today().year)+1
+        for x in range(year_min, year_max):
+            years.append(x)
+        return years
+
+    year = fields.Selection('_year_between', string="Year", required=True)#TODO add min/max val
     school_id = fields.Many2one('bedit_ecoles.school', string="School", required=True)
     company_id = fields.Many2one('bedit_ecoles.company', string="Company", required=True)
     number = fields.Integer(string = 'number of participant')
+
+
 
     @api.depends('school_id', 'company_id', 'year')
     def _get_name(self):
