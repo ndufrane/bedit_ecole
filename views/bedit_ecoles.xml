@@ -369,7 +369,7 @@
         <record model="ir.actions.act_window.view" id="act_school_geo_view">
             <field eval="3" name="sequence"/>
             <field name="view_mode">geoengine</field>
-            <field name="view_id" ref="ir_ui_view_schoolgeoview0"/>
+            <field name="view_id" ref="ir_ui_view_schoolgeoview1"/>
             <field name="act_window_id" ref="school_list_action"/>
         </record>
 

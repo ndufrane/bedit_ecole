@@ -94,7 +94,7 @@
 
 
 
-      <record id="ir_ui_view_schoolgeoview0" model="ir.ui.view">
+      <record id="ir_ui_view_schoolgeoview1" model="ir.ui.view">
         <field name="name">bedit_ecoles.school.geo_view</field>
         <field name="arch" type="xml">
           <geoengine>
@@ -105,34 +105,34 @@
         <field name="model">bedit_ecoles.school</field>
       </record>
 
-      <record id="geoengine_vector_layer_basictest0" model="geoengine.vector.layer">
+      <record id="geoengine_vector_layer_basictest1" model="geoengine.vector.layer">
         <field name="geo_field_id" ref="bedit_ecoles.field_bedit_ecoles_school_the_geom"/>
         <field name="name">Basic School</field>
-        <field name="view_id" ref="ir_ui_view_schoolgeoview0"/>
+        <field name="view_id" ref="ir_ui_view_schoolgeoview1"/>
         <field name="geo_repr">basic</field>
         <field name="attribute_field_id" ref="field_bedit_ecoles_school_name"/>
         <field name="begin_color">#FF680A</field>
       </record>
 
-      <record id="geoengine_raster_layer_test0" model="geoengine.raster.layer">
+      <record id="geoengine_raster_layer_test1" model="geoengine.raster.layer">
         <field name="raster_type">osm</field>
         <field name="name">ZIP OSM</field>
-        <field name="view_id" ref="ir_ui_view_schoolgeoview0"/>
+        <field name="view_id" ref="ir_ui_view_schoolgeoview1"/>
         <field eval="0" name="overlay"/>
       </record>
 
-      <record id="geoengine_raster_layer_osm0" model="geoengine.raster.layer">
+      <record id="geoengine_raster_layer_osm1" model="geoengine.raster.layer">
         <field name="raster_type">osm</field>
         <field name="name">ZIP OSM Light</field>
-        <field name="view_id" ref="ir_ui_view_schoolgeoview0"/>
+        <field name="view_id" ref="ir_ui_view_schoolgeoview1"/>
         <field eval="1" name="overlay"/>
       </record>
 
-      <record id="geoengine_raster_layer_basic0" model="geoengine.raster.layer">
+      <record id="geoengine_raster_layer_basic1" model="geoengine.raster.layer">
           <field name="raster_type">d_wms</field>
           <field name="name">basic</field>
           <field name="url">vmap0.tiles.osgeo.org/wms/vmap0</field>
-          <field name="view_id" ref="ir_ui_view_schoolgeoview0"/>
+          <field name="view_id" ref="ir_ui_view_schoolgeoview1"/>
           <field eval="1" name="overlay"/>
       </record>
 
