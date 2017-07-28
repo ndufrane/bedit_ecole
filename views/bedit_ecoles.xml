@@ -377,8 +377,20 @@
         <!-- activity -->
 
         <!-- Visualisation des activities -->
-        <record model="ir.ui.view" id="activity_view_kaban">
+        <record model="ir.ui.view" id="activity_view_tree">
             <field name="name">bedit_ecoles.activity.tree</field>
+            <field name="model">bedit_ecoles.activity</field>
+            <field name="arch" type="xml">
+                <tree string="Activities">
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="number"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="activity_view_kaban">
+            <field name="name">bedit_ecoles.activity.kanban</field>
             <field name="model">bedit_ecoles.activity</field>
             <field name="arch" type="xml">
                 <kanban>
@@ -452,7 +464,7 @@
             <field name="name">Activities</field>
             <field name="res_model">bedit_ecoles.activity</field>
             <field name="view_type">form</field>
-            <field name="view_mode">kanban,form</field>
+            <field name="view_mode">tree,kanban,form</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">Create first activity</p><!-- Si pas de données messages d'info -->
             </field>
