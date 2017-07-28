@@ -20,13 +20,20 @@
         <menuitem id="company_menu" name="Company" parent="bedit_ecoles_menu"
                 action="company_list_action"/><!-- Sous-Menu -->
 
-        <menuitem id="municipality_menu" name="Municipality" parent="bedit_ecoles_menu"
+        <menuitem id="bedit_ecoles_admin"
+                  parent="base.menu_administration"
+                  sequence="20"
+                  name="Bedit Ecoles Admin"
+        />
+
+
+        <menuitem id="municipality_menu" name="Municipality" parent="bedit_ecoles_admin"
                 action="municipality_list_action"/><!-- Sous-Menu -->
 
-        <menuitem id="postcode_menu" name="Postcode" parent="bedit_ecoles_menu"
+        <menuitem id="postcode_menu" name="Postcode" parent="bedit_ecoles_admin"
                 action="postcode_list_action"/><!-- Sous-Menu -->
 
-        <menuitem id="school_type_menu" name="SchoolType" parent="bedit_ecoles_menu"
+        <menuitem id="school_type_menu" name="SchoolType" parent="bedit_ecoles_admin"
                 action="school_type_list_action"/><!-- Sous-Menu -->
 
     </data>

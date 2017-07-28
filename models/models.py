@@ -75,7 +75,7 @@ class activity(models.Model):
         year_min = 2010
         year_max = (date.today().year)+1
         for x in range(year_min, year_max):
-            years.append(x)
+            years.append((x,str(x)))
         return years
 
     year = fields.Selection('_year_between', string="Year", required=True)#TODO add min/max val
