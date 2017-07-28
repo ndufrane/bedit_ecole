@@ -377,13 +377,35 @@
         <!-- activity -->
 
         <!-- Visualisation des activities -->
-        <record model="ir.ui.view" id="activity_view_tree">
+        <record model="ir.ui.view" id="activity_view_kaban">
             <field name="name">bedit_ecoles.activity.tree</field>
             <field name="model">bedit_ecoles.activity</field>
             <field name="arch" type="xml">
-                <tree string="Activities">
+                <kanban>
                     <field name="name"/>
-                </tree>
+                    <field name="description"/>
+                    <field name="number"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <!-- Contenu -->
+                                <div class="oe_kanban_details">
+                                    <strong>
+                                        <field name="name"/>
+                                    </strong>
+                                    <ul>
+                                        <li>
+                                            <t t-if="record.description.raw_value">Description : <field name="description"/></t>
+                                        </li>
+                                        <li>
+                                            <t t-if="record.number.raw_value">Number of participant : <field name="number"/></t>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
             </field>
         </record>
 
@@ -412,7 +434,7 @@
                         <div class="oe_title">
                             <field name="name"/>
                         </div>
-                        <group col="1" string="Properties">
+                        <group col="2" string="Properties">
                             <group>
                             <field name="description"/>
                             <field name="year"/>
@@ -430,7 +452,7 @@
             <field name="name">Activities</field>
             <field name="res_model">bedit_ecoles.activity</field>
             <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">kanban,form</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">Create first activity</p><!-- Si pas de données messages d'info -->
             </field>

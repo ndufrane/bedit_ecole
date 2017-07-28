@@ -81,7 +81,7 @@ class activity(models.Model):
     year = fields.Selection('_year_between', string="Year", required=True)#TODO add min/max val
     school_id = fields.Many2one('bedit_ecoles.school', string="School", required=True)
     company_id = fields.Many2one('bedit_ecoles.company', string="Company", required=True)
-    number = fields.Integer(string = 'number of participant')
+    number = fields.Integer(string = 'Number of participant')
 
 
 
