@@ -101,7 +101,7 @@
         <!-- school_type -->
 
         <!-- Visualisation des school_type -->
-        <record model="ir.ui.view" id="school_type_view">
+        <record model="ir.ui.view" id="school_type_view_tree">
             <field name="name">bedit_ecoles.school_type.tree</field>
             <field name="model">bedit_ecoles.school_type</field>
             <field name="arch" type="xml">
@@ -233,7 +233,7 @@
             <field name="name">Companies</field>
             <field name="res_model">bedit_ecoles.company</field>
             <field name="view_type">form</field>
-            <field name="view_mode">kanban,form</field>
+            <field name="view_mode">kanban,form,geoengine</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">Create first company</p><!-- Si pas de données messages d'info -->
             </field>
@@ -346,7 +346,7 @@
             <field name="name">Schools</field>
             <field name="res_model">bedit_ecoles.school</field>
             <field name="view_type">form</field>
-            <field name="view_mode">kanban,form</field>
+            <field name="view_mode">kanban,form,geoengine</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">Create first school</p><!-- Si pas de données messages d'info -->
             </field>
@@ -377,7 +377,7 @@
         <!-- activity -->
 
         <!-- Visualisation des activities -->
-        <record model="ir.ui.view" id="activity_view">
+        <record model="ir.ui.view" id="activity_view_tree">
             <field name="name">bedit_ecoles.activity.tree</field>
             <field name="model">bedit_ecoles.activity</field>
             <field name="arch" type="xml">
