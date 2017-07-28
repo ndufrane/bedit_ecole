@@ -88,7 +88,9 @@ class activity(models.Model):
     @api.depends('school_id', 'company_id', 'year')
     def _get_name(self):
         for record in self:
-            name = '%s / %s (%s)' % (record.school_id.name, record.company_id.name, record.year)
+            name = ''
+            if (record.year and record.school_id and record.company_id):
+                name = '%s / %s (%s)' % (record.school_id.name, record.company_id.name, record.year)
             record.name = name
 
-    name = fields.Char(compute='_get_name', store=True)
+    name = fields.Char(compute='_get_name')
