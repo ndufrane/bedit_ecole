@@ -75,7 +75,7 @@ class activity(geo_model.GeoModel):
         year_min = 2010
         year_max = (date.today().year)+1
         for x in range(year_min, year_max):
-            years.append((x,str(x)))
+            years.append((str(x),str(x)))
         return years
 
     def _get_this_year(self):
