@@ -79,7 +79,7 @@ class activity(geo_model.GeoModel):
         return years
 
     def _get_this_year(self):
-        return date.today().year
+        return str(date.today().year)
 
     year = fields.Selection('_year_between', string="Year", default=lambda self: self._get_this_year(), required=True)#TODO add min/max val
     school_id = fields.Many2one('bedit_ecoles.school', string="School", required=True)
