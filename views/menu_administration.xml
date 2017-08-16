@@ -3,8 +3,7 @@
     <data>
 
         <!-- Panel global -->
-        <menuitem id="main_bedit_ecoles_menu" name="Bedit Ecole"/><!-- Titre -->
-
+        <menuitem id="main_bedit_ecoles_menu" name="Bedit Ecole" web_icon="bedit_ecoles,static/src/img/icon-schools.png"/><!-- Titre -->
 
         <!-- Menu de gauche -->
 
