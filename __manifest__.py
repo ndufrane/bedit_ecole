@@ -20,7 +20,6 @@
 
     # any module necessary for this one to work correctly
     'depends': ['base',
-                'website',
                 'web_tree_image',
                 'base_geoengine'],
 
