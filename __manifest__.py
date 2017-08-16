@@ -31,6 +31,7 @@
         'views/bedit_ecoles.xml',#Adding custom view/form for bedit_ecoles
         'views/menu_administration.xml',#Adding custom administration menu
         'views/views.xml',
+        'views/report.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

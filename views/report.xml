@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+            id="bedit_ecoles_report_activity"
+            model="bedit_ecoles.activity"
+            string="Activity"
+            report_type="qweb-pdf"
+            name="bedit_ecoles.report_activity"
+            attachment_use="True"
+            attachment="((object.school_id)+'-'+(object.company_id)+('_')+(object.year)+'.pdf')"
+            groups="group_bedit_ecoles_user,group_bedit_ecoles_manager"
+        />
+
+        <template id="report_activity">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="report.external_layout">
+                        <div class="page">
+                            <h2>Activity Report</h2>
+                            <p>Activity : <span t-field="o.description"/></p>
+                            <p>School : <span t-field="o.school_id"/></p>
+                            <p>Company : <span t-field="o.company_id"/></p>
+                            <p>Year : <span t-field="o.year"/></p>
+                            <p>Student nummber : <span t-field="o.number"/></p>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>
