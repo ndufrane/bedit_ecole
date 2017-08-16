@@ -49,5 +49,155 @@
             <field name="description">Adolescent</field>
         </record>
 
+        <!-- school -->
+        <record id="school_Magnolias_pri" model="bedit_ecoles.school">
+            <field name="name">Magnolias (primaire)</field>
+            <field name="address">Rue des Magnolias 1</field>
+            <field name="the_geom">POINT(484786.606752028 6593611.28984949)</field>
+            <field name="postcode_id" ref="postcode_bru"/>
+            <field name="municipality_id" ref="municipality_bru"/>
+            <field name="stype_id" ref="school_type_pri"/>
+        </record>
+        <record id="school_Magnolias_sec" model="bedit_ecoles.school">
+            <field name="name">Magnolias (segondaire)</field>
+            <field name="address">Rue des Magnolias 1</field>
+            <field name="the_geom">POINT(484786.606752028 6593611.28984949)</field>
+            <field name="postcode_id" ref="postcode_bru"/>
+            <field name="municipality_id" ref="municipality_bru"/>
+            <field name="stype_id" ref="school_type_sec"/>
+        </record>
+        <record id="school_Pain" model="bedit_ecoles.school">
+            <field name="name">Petit Pain</field>
+            <field name="address">Rue des boulangés 4</field>
+            <field name="the_geom">POINT(482283.294075689 6595092.23394579)</field>
+            <field name="postcode_id" ref="postcode_and"/>
+            <field name="municipality_id" ref="postcode_and"/>
+            <field name="stype_id" ref="school_type_sec"/>
+        </record>
+        <record id="school_Ptoleme" model="bedit_ecoles.school">
+            <field name="name">Ptoleme</field>
+            <field name="address">Avenue Marcel 18</field>
+            <field name="the_geom">POINT(487658.966955557 6595368.96951161)</field>
+            <field name="postcode_id" ref="postcode_and"/>
+            <field name="municipality_id" ref="postcode_and"/>
+            <field name="stype_id" ref="school_type_sec"/>
+        </record>
+
+        <!-- company -->
+        <record id="company_comp1" model="bedit_ecoles.company">
+            <field name="name">Comp1</field>
+            <field name="address">Rue de l'industrie 34</field>
+            <field name="the_geom">POINT(479273.58608696 6590001.65919149)</field>
+            <field name="postcode_id" ref="postcode_and"/>
+            <field name="municipality_id" ref="postcode_and"/>
+        </record>
+        <record id="company_comp2" model="bedit_ecoles.company">
+            <field name="name">Comp2</field>
+            <field name="address">Rue de la chapelle</field>
+            <field name="the_geom">POINT(487629.108741384 6590206.72082856)</field>
+            <field name="postcode_id" ref="postcode_ixe"/>
+            <field name="municipality_id" ref="postcode_ixe"/>
+        </record>
+
+        <!-- company -->
+        <record id="activity_1_1_1" model="bedit_ecoles.activity">
+            <field name="description">Voyage Jaune</field>
+            <field name="year">2014</field>
+            <field name="number">67</field>
+            <field name="school_id" ref="school_Magnolias_pri"/>
+            <field name="company_id" ref="company_comp1"/>
+        </record>
+        <record id="activity_1_1_2" model="bedit_ecoles.activity">
+            <field name="description">Voyage Jaune</field>
+            <field name="year">2015</field>
+            <field name="number">72</field>
+            <field name="school_id" ref="school_Magnolias_pri"/>
+            <field name="company_id" ref="company_comp1"/>
+        </record>
+        <record id="activity_1_1_3" model="bedit_ecoles.activity">
+            <field name="description">Voyage Jaune</field>
+            <field name="year">2016</field>
+            <field name="number">71</field>
+            <field name="school_id" ref="school_Magnolias_pri"/>
+            <field name="company_id" ref="company_comp1"/>
+        </record>
+        <record id="activity_2_1_1" model="bedit_ecoles.activity">
+            <field name="description">Voyage Rheto</field>
+            <field name="year">2015</field>
+            <field name="number">45</field>
+            <field name="school_id" ref="school_Magnolias_sec"/>
+            <field name="company_id" ref="company_comp1"/>
+        </record>
+        <record id="activity_2_1_2" model="bedit_ecoles.activity">
+            <field name="description">Voyage Rheto</field>
+            <field name="year">2016</field>
+            <field name="number">48</field>
+            <field name="school_id" ref="school_Magnolias_sec"/>
+            <field name="company_id" ref="company_comp1"/>
+        </record>
+        <record id="activity_2_1_3" model="bedit_ecoles.activity">
+            <field name="description">Voyage Rheto</field>
+            <field name="year">2017</field>
+            <field name="number">51</field>
+            <field name="school_id" ref="school_Magnolias_sec"/>
+            <field name="company_id" ref="company_comp1"/>
+        </record>
+        <record id="activity_3_2_1" model="bedit_ecoles.activity">
+            <field name="description">Voyage Rome</field>
+            <field name="year">2013</field>
+            <field name="number">34</field>
+            <field name="school_id" ref="school_Pain"/>
+            <field name="company_id" ref="company_comp2"/>
+        </record>
+        <record id="activity_3_2_2" model="bedit_ecoles.activity">
+            <field name="description">Voyage Rome</field>
+            <field name="year">2015</field>
+            <field name="number">39</field>
+            <field name="school_id" ref="school_Pain"/>
+            <field name="company_id" ref="company_comp2"/>
+        </record>
+        <record id="activity_4_2_1" model="bedit_ecoles.activity">
+            <field name="description">Voyage Krakow</field>
+            <field name="year">2012</field>
+            <field name="number">67</field>
+            <field name="school_id" ref="school_Ptoleme"/>
+            <field name="company_id" ref="company_comp2"/>
+        </record>
+        <record id="activity_4_1_2" model="bedit_ecoles.activity">
+            <field name="description">Voyage Toscane</field>
+            <field name="year">2013</field>
+            <field name="number">62</field>
+            <field name="school_id" ref="school_Ptoleme"/>
+            <field name="company_id" ref="company_comp1"/>
+        </record>
+        <record id="activity_4_2_3" model="bedit_ecoles.activity">
+            <field name="description">Voyage Krakow</field>
+            <field name="year">2014</field>
+            <field name="number">65</field>
+            <field name="school_id" ref="school_Ptoleme"/>
+            <field name="company_id" ref="company_comp2"/>
+        </record>
+        <record id="activity_4_1_4" model="bedit_ecoles.activity">
+            <field name="description">Voyage Toscane</field>
+            <field name="year">2015</field>
+            <field name="number">61</field>
+            <field name="school_id" ref="school_Ptoleme"/>
+            <field name="company_id" ref="company_comp1"/>
+        </record>
+        <record id="activity_4_2_5" model="bedit_ecoles.activity">
+            <field name="description">Voyage Krakow</field>
+            <field name="year">2016</field>
+            <field name="number">66</field>
+            <field name="school_id" ref="school_Ptoleme"/>
+            <field name="company_id" ref="company_comp2"/>
+        </record>
+        <record id="activity_4_1_6" model="bedit_ecoles.activity">
+            <field name="description">Voyage Toscane</field>
+            <field name="year">2017</field>
+            <field name="number">67</field>
+            <field name="school_id" ref="school_Ptoleme"/>
+            <field name="company_id" ref="company_comp1"/>
+        </record>
+
     </data>
 </odoo>

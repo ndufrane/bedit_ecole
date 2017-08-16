@@ -452,7 +452,7 @@
                         <group col="2" string="Properties">
                             <group>
                             <field name="description"/>
-                            <field name="year"/>
+                            <field name="year" widget="selection"/>
                             <field name="school_id"/>
                             <field name="company_id"/>
                             <field name="number"/>
@@ -471,7 +471,7 @@
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">Create first activity</p><!-- Si pas de données messages d'info -->
             </field>
-            <field name= "context">{"search_default_year":2017}</field><!-- TODO: trouver l'année actuelle -->
+            <field name="context">{"search_default_year":2017}</field><!-- TODO: trouver l'année actuelle -->
         </record>
 
         <record model="ir.actions.act_window.view" id="act_activity_geo_view">

@@ -75,10 +75,13 @@ class activity(geo_model.GeoModel):
         year_min = 2010
         year_max = (date.today().year)+1
         for x in range(year_min, year_max):
-            years.append((x,str(x)))
+            years.append((str(x),str(x)))
         return years
 
-    year = fields.Selection('_year_between', string="Year", required=True)#TODO add min/max val
+    def _get_this_year(self):
+        return str(date.today().year)
+
+    year = fields.Selection('_year_between', string="Year", default=lambda self: self._get_this_year(), required=True)#TODO add min/max val
     school_id = fields.Many2one('bedit_ecoles.school', string="School", required=True)
     company_id = fields.Many2one('bedit_ecoles.company', string="Company", required=True)
     number = fields.Integer(string = 'Number of participant')
