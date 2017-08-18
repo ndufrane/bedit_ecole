@@ -418,8 +418,8 @@
             <field name="name">bedit_ecoles.activity.tree</field>
             <field name="model">bedit_ecoles.activity</field>
             <field name="arch" type="xml">
-                <tree string="Activities" default_order="name">
-                    <field name="name"/>
+                <tree string="Activities" default_order="school_id">
+                    <field name="school_id"/>
                     <field name="description"/>
                     <field name="number"/>
                 </tree>
