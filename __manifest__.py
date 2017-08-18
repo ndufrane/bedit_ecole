@@ -20,7 +20,6 @@
 
     # any module necessary for this one to work correctly
     'depends': ['base',
-                'web_tree_image',
                 'base_geoengine',
                 'report'],
 
@@ -33,6 +32,7 @@
         'views/menu_administration.xml',#Adding custom administration menu
         'views/views.xml',
         'views/report_activity.xml',
+        'views/web.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
