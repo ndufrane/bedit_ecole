@@ -2,54 +2,8 @@
     <data>
       <!-- GeoEngine views -->
 
-      <record id="ir_ui_view_companygeoview0" model="ir.ui.view">
-        <field name="name">bedit_ecoles.company.geo_view</field>
-        <field name="arch" type="xml">
-          <geoengine>
-            <field name="name"/>
-          </geoengine>
-        </field>
-        <field eval="16" name="priority"/>
-        <field name="model">bedit_ecoles.company</field>
-      </record>
-
-      <record id="geoengine_vector_layer_basictest0" model="geoengine.vector.layer">
-        <field name="geo_field_id" ref="bedit_ecoles.field_bedit_ecoles_company_the_geom"/>
-        <field name="name">Basic Company</field>
-        <field name="view_id" ref="ir_ui_view_companygeoview0"/>
-        <field name="geo_repr">basic</field>
-        <field name="attribute_field_id" ref="field_bedit_ecoles_company_name"/>
-        <field name="begin_color">#FF680A</field>
-      </record>
-
-      <record id="geoengine_raster_layer_test0" model="geoengine.raster.layer">
-        <field name="raster_type">osm</field>
-        <field name="name">ZIP OSM</field>
-        <field name="view_id" ref="ir_ui_view_companygeoview0"/>
-        <field eval="0" name="overlay"/>
-      </record>
-
-      <record id="geoengine_raster_layer_osm0" model="geoengine.raster.layer">
-        <field name="raster_type">osm</field>
-        <field name="name">ZIP OSM Light</field>
-        <field name="view_id" ref="ir_ui_view_companygeoview0"/>
-        <field eval="1" name="overlay"/>
-      </record>
-
-      <record id="geoengine_raster_layer_basic0" model="geoengine.raster.layer">
-          <field name="raster_type">d_wms</field>
-          <field name="name">basic</field>
-          <field name="url">vmap0.tiles.osgeo.org/wms/vmap0</field>
-          <field name="view_id" ref="ir_ui_view_companygeoview0"/>
-          <field eval="1" name="overlay"/>
-      </record>
-
-
-
-
-
-
-      <record id="ir_ui_view_companygeoview_lb72" model="ir.ui.view">
+      <!-- Company -->
+      <record id="ir_ui_view_companygeoview" model="ir.ui.view">
         <field name="name">bedit_ecoles.company.geo_view_lb72</field>
         <field name="arch" type="xml">
           <geoengine>
@@ -65,7 +19,7 @@
       <record id="geoengine_vector_layer_72" model="geoengine.vector.layer">
         <field name="geo_field_id" ref="bedit_ecoles.field_bedit_ecoles_company_the_geom"/>
         <field name="name">Company</field>
-        <field name="view_id" ref="ir_ui_view_companygeoview_lb72"/>
+        <field name="view_id" ref="ir_ui_view_companygeoview"/>
         <field name="geo_repr">basic</field>
         <field name="attribute_field_id" ref="field_bedit_ecoles_company_name"/>
         <field name="begin_color">#FF680A</field>
@@ -75,7 +29,7 @@
           <field name="raster_type">wmts_cap</field>
           <field name="name">urbisFR</field>
           <field name="url">http://geoservices-urbis.irisnet.be/geoserver/gwc/service/wmts?REQUEST=GetCapabilities</field>
-          <field name="view_id" ref="ir_ui_view_companygeoview_lb72"/>
+          <field name="view_id" ref="ir_ui_view_companygeoview"/>
           <field name="projection">EPSG:31370</field>
           <field name="matrix_set">EPSG:31370</field>
           <field eval="0" name="overlay"/>
@@ -85,64 +39,13 @@
           <field name="raster_type">d_wms</field>
           <field name="name">urbisNL</field>
           <field name="url">http://geoservices-urbis.irisnet.be/geoserver/ows</field>
-          <field name="view_id" ref="ir_ui_view_companygeoview_lb72"/>
+          <field name="view_id" ref="ir_ui_view_companygeoview"/>
           <field name="projection">EPSG:31370</field>
           <field eval="1" name="overlay"/>
       </record>
 
-
-
-
-
-      <record id="ir_ui_view_schoolgeoview1" model="ir.ui.view">
-        <field name="name">bedit_ecoles.school.geo_view</field>
-        <field name="arch" type="xml">
-          <geoengine>
-            <field name="name"/>
-          </geoengine>
-        </field>
-        <field eval="16" name="priority"/>
-        <field name="model">bedit_ecoles.school</field>
-      </record>
-
-      <record id="geoengine_vector_layer_basictest1" model="geoengine.vector.layer">
-        <field name="geo_field_id" ref="bedit_ecoles.field_bedit_ecoles_school_the_geom"/>
-        <field name="name">Basic School</field>
-        <field name="view_id" ref="ir_ui_view_schoolgeoview1"/>
-        <field name="geo_repr">basic</field>
-        <field name="attribute_field_id" ref="field_bedit_ecoles_school_name"/>
-        <field name="begin_color">#FF680A</field>
-      </record>
-
-      <record id="geoengine_raster_layer_test1" model="geoengine.raster.layer">
-        <field name="raster_type">osm</field>
-        <field name="name">ZIP OSM</field>
-        <field name="view_id" ref="ir_ui_view_schoolgeoview1"/>
-        <field eval="0" name="overlay"/>
-      </record>
-
-      <record id="geoengine_raster_layer_osm1" model="geoengine.raster.layer">
-        <field name="raster_type">osm</field>
-        <field name="name">ZIP OSM Light</field>
-        <field name="view_id" ref="ir_ui_view_schoolgeoview1"/>
-        <field eval="1" name="overlay"/>
-      </record>
-
-      <record id="geoengine_raster_layer_basic1" model="geoengine.raster.layer">
-          <field name="raster_type">d_wms</field>
-          <field name="name">basic</field>
-          <field name="url">vmap0.tiles.osgeo.org/wms/vmap0</field>
-          <field name="view_id" ref="ir_ui_view_schoolgeoview1"/>
-          <field eval="1" name="overlay"/>
-      </record>
-
-
-
-
-
-
-
-      <record id="ir_ui_view_schoolgeoview_lb72" model="ir.ui.view">
+      <!-- School -->
+      <record id="ir_ui_view_schoolgeoview" model="ir.ui.view">
         <field name="name">bedit_ecoles.school.geo_view_lb72</field>
         <field name="arch" type="xml">
           <geoengine>
@@ -158,7 +61,7 @@
       <record id="geoengine_vector_layer_72" model="geoengine.vector.layer">
         <field name="geo_field_id" ref="bedit_ecoles.field_bedit_ecoles_school_the_geom"/>
         <field name="name">School</field>
-        <field name="view_id" ref="ir_ui_view_schoolgeoview_lb72"/>
+        <field name="view_id" ref="ir_ui_view_schoolgeoview"/>
         <field name="geo_repr">basic</field>
         <field name="attribute_field_id" ref="field_bedit_ecoles_school_name"/>
         <field name="begin_color">#FF680A</field>
@@ -168,7 +71,7 @@
           <field name="raster_type">wmts_cap</field>
           <field name="name">urbisFR</field>
           <field name="url">http://geoservices-urbis.irisnet.be/geoserver/gwc/service/wmts?REQUEST=GetCapabilities</field>
-          <field name="view_id" ref="ir_ui_view_schoolgeoview_lb72"/>
+          <field name="view_id" ref="ir_ui_view_schoolgeoview"/>
           <field name="projection">EPSG:31370</field>
           <field name="matrix_set">EPSG:31370</field>
           <field eval="0" name="overlay"/>
@@ -178,23 +81,13 @@
           <field name="raster_type">d_wms</field>
           <field name="name">urbisNL</field>
           <field name="url">http://geoservices-urbis.irisnet.be/geoserver/ows</field>
-          <field name="view_id" ref="ir_ui_view_schoolgeoview_lb72"/>
+          <field name="view_id" ref="ir_ui_view_schoolgeoview"/>
           <field name="projection">EPSG:31370</field>
           <field eval="1" name="overlay"/>
       </record>
 
-
-
-
-
-
-
-
-
-
-
-
-      <record id="ir_ui_view_activitygeoview2" model="ir.ui.view">
+      <!--Activity -->
+      <record id="ir_ui_view_activitygeoview" model="ir.ui.view">
         <field name="name">bedit_ecoles.activity.geo_view</field>
         <field name="arch" type="xml">
           <geoengine>
@@ -203,38 +96,36 @@
         </field>
         <field eval="16" name="priority"/>
         <field name="model">bedit_ecoles.activity</field>
+        <field name="projection">EPSG:31370</field>
+        <field name="default_extent">0, 0, 300000, 300000</field>
       </record>
 
-      <record id="geoengine_vector_layer_basictest2" model="geoengine.vector.layer">
+      <record id="geoengine_vector_activity_72" model="geoengine.vector.layer">
         <field name="geo_field_id" ref="bedit_ecoles.field_bedit_ecoles_activity_the_geom"/>
-        <field name="name">Basic Activity</field>
-        <field name="view_id" ref="ir_ui_view_activitygeoview2"/>
+        <field name="name">Activity</field>
+        <field name="view_id" ref="ir_ui_view_activitygeoview"/>
         <field name="geo_repr">basic</field>
-        <field name="attribute_field_id" ref="field_bedit_ecoles_company_name"/>
+        <field name="attribute_field_id" ref="field_bedit_ecoles_activity_name"/>
         <field name="begin_color">#FF680A</field>
       </record>
 
-      <record id="geoengine_raster_layer_test2" model="geoengine.raster.layer">
-        <field name="raster_type">osm</field>
-        <field name="name">ZIP OSM</field>
-        <field name="view_id" ref="ir_ui_view_activitygeoview2"/>
-        <field eval="0" name="overlay"/>
+      <record id="geoengine_raster_layer_lb72" model="geoengine.raster.layer">
+          <field name="raster_type">wmts_cap</field>
+          <field name="name">urbisFR</field>
+          <field name="url">http://geoservices-urbis.irisnet.be/geoserver/gwc/service/wmts?REQUEST=GetCapabilities</field>
+          <field name="view_id" ref="ir_ui_view_activitygeoview"/>
+          <field name="projection">EPSG:31370</field>
+          <field name="matrix_set">EPSG:31370</field>
+          <field eval="0" name="overlay"/>
       </record>
 
-      <record id="geoengine_raster_layer_osm2" model="geoengine.raster.layer">
-        <field name="raster_type">osm</field>
-        <field name="name">ZIP OSM Light</field>
-        <field name="view_id" ref="ir_ui_view_activitygeoview2"/>
-        <field eval="1" name="overlay"/>
-      </record>
-
-      <record id="geoengine_raster_layer_basic2" model="geoengine.raster.layer">
+      <record id="geoengine_raster_wmslayer_lb72" model="geoengine.raster.layer">
           <field name="raster_type">d_wms</field>
-          <field name="name">basic</field>
-          <field name="url">vmap0.tiles.osgeo.org/wms/vmap0</field>
-          <field name="view_id" ref="ir_ui_view_activitygeoview2"/>
+          <field name="name">urbisNL</field>
+          <field name="url">http://geoservices-urbis.irisnet.be/geoserver/ows</field>
+          <field name="view_id" ref="ir_ui_view_activitygeoview"/>
+          <field name="projection">EPSG:31370</field>
           <field eval="1" name="overlay"/>
       </record>
-
     </data>
 </odoo>
