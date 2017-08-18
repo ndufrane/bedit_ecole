@@ -21,7 +21,8 @@
     # any module necessary for this one to work correctly
     'depends': ['base',
                 'web_tree_image',
-                'base_geoengine'],
+                'base_geoengine',
+                'report'],
 
     # always loaded
     'data': [
@@ -31,7 +32,7 @@
         'views/bedit_ecoles.xml',#Adding custom view/form for bedit_ecoles
         'views/menu_administration.xml',#Adding custom administration menu
         'views/views.xml',
-        'views/report.xml',
+        'views/report_activity.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
