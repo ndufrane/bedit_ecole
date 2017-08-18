@@ -420,6 +420,11 @@
             <field name="arch" type="xml">
                 <tree string="Activities" default_order="school_id">
                     <field name="school_id"/>
+                    <field name="school_muni"/>
+                    <field name="school_adr"/>
+                    <field name="school_type"/>
+                    <field name="company_id"/>
+                    <field name="year" />
                     <field name="description"/>
                     <field name="number"/>
                 </tree>
