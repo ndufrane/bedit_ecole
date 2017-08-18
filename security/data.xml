@@ -2,12 +2,12 @@
     <data>
 
         <record id="group_bedit_ecoles_user" model="res.groups">
-            <field name="name">Bedit ecole user</field>
+            <field name="name">Bedit school user</field>
             <field name="implied_ids" eval="[(4, ref('base_geoengine.group_geoengine_user')),]"/>
         </record>
 
         <record id="group_bedit_ecoles_manager" model="res.groups">
-            <field name="name">Bedit ecole manager</field>
+            <field name="name">Bedit school manager</field>
             <field name="implied_ids" eval="[(4, ref('group_bedit_ecoles_user')),(4, ref('base_geoengine.group_geoengine_user')),]"/>
             <field name="users" eval="[(4, ref('base.user_root'))]"/>
         </record>

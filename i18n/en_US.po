@@ -1,0 +1,374 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* bedit_ecoles
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20170807\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-16 12:22+0000\n"
+"PO-Revision-Date: 2017-08-16 12:22+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: bedit_ecoles
+#: model:ir.actions.act_window,name:bedit_ecoles.activity_list_action
+#: model:ir.ui.view,arch_db:bedit_ecoles.activity_view_tree
+msgid "Activities"
+msgstr "Activities"
+
+#. module: bedit_ecoles
+#: model:ir.model,name:bedit_ecoles.model_bedit_ecoles_activity
+#: model:ir.ui.menu,name:bedit_ecoles.activity_menu
+msgid "Activity"
+msgstr "Activity"
+
+#. module: bedit_ecoles
+#: model:ir.ui.view,arch_db:bedit_ecoles.activity_form_view
+msgid "Activity Form"
+msgstr "Activity Form"
+
+#. module: bedit_ecoles
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_company_address
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_school_address
+msgid "Address"
+msgstr "Address"
+
+#. module: bedit_ecoles
+#: model:geoengine.vector.layer,name:bedit_ecoles.geoengine_vector_layer_basictest2
+msgid "Basic Activity"
+msgstr "Basic Activity"
+
+#. module: bedit_ecoles
+#: model:geoengine.vector.layer,name:bedit_ecoles.geoengine_vector_layer_basictest0
+msgid "Basic Company"
+msgstr "Basic Company"
+
+#. module: bedit_ecoles
+#: model:geoengine.vector.layer,name:bedit_ecoles.geoengine_vector_layer_basictest1
+msgid "Basic School"
+msgstr "Basic School"
+
+#. module: bedit_ecoles
+#: model:ir.ui.menu,name:bedit_ecoles.bedit_ecoles_menu
+#: model:ir.ui.menu,name:bedit_ecoles.main_bedit_ecoles_menu
+msgid "Bedit School"
+msgstr "Bedit School"
+
+#. module: bedit_ecoles
+#: model:ir.ui.menu,name:bedit_ecoles.bedit_ecoles_admin
+msgid "Bedit School Admin"
+msgstr "Bedit School Admin"
+
+#. module: bedit_ecoles
+#: model:res.groups,name:bedit_ecoles.group_bedit_ecoles_manager
+msgid "Bedit school manager"
+msgstr "Bedit school manager"
+
+#. module: bedit_ecoles
+#: model:res.groups,name:bedit_ecoles.group_bedit_ecoles_user
+msgid "Bedit school user"
+msgstr "Bedit school user"
+
+#. module: bedit_ecoles
+#: model:ir.ui.view,arch_db:bedit_ecoles.company_form_view
+#: model:ir.ui.view,arch_db:bedit_ecoles.school_form_view
+msgid "Cartography"
+msgstr "Cartography"
+
+#. module: bedit_ecoles
+#: model:ir.actions.act_window,name:bedit_ecoles.company_list_action
+msgid "Companies"
+msgstr "Companies"
+
+#. module: bedit_ecoles
+#: model:ir.model,name:bedit_ecoles.model_bedit_ecoles_company
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_activity_company_id
+#: model:ir.ui.menu,name:bedit_ecoles.company_menu
+msgid "Company"
+msgstr "Company"
+
+#. module: bedit_ecoles
+#: model:ir.ui.view,arch_db:bedit_ecoles.company_form_view
+msgid "Company Form"
+msgstr "Company Form"
+
+#. module: bedit_ecoles
+#: model:ir.actions.act_window,help:bedit_ecoles.activity_list_action
+msgid "Create first activity"
+msgstr "Create first activity"
+
+#. module: bedit_ecoles
+#: model:ir.actions.act_window,help:bedit_ecoles.company_list_action
+msgid "Create first company"
+msgstr "Create first company"
+
+#. module: bedit_ecoles
+#: model:ir.actions.act_window,help:bedit_ecoles.municipality_list_action
+msgid "Create first municipality"
+msgstr "Create first municipality"
+
+#. module: bedit_ecoles
+#: model:ir.actions.act_window,help:bedit_ecoles.postcode_list_action
+msgid "Create first post code"
+msgstr "Create first post code"
+
+#. module: bedit_ecoles
+#: model:ir.actions.act_window,help:bedit_ecoles.school_list_action
+msgid "Create first school"
+msgstr "Create first school"
+
+#. module: bedit_ecoles
+#: model:ir.actions.act_window,help:bedit_ecoles.school_type_list_action
+msgid "Create first school type"
+msgstr "Create first school type"
+
+#. module: bedit_ecoles
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_activity_create_uid
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_company_create_uid
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_municipality_create_uid
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_postcode_create_uid
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_school_create_uid
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_school_type_create_uid
+msgid "Created by"
+msgstr "Created by"
+
+#. module: bedit_ecoles
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_activity_create_date
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_company_create_date
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_municipality_create_date
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_postcode_create_date
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_school_create_date
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_school_type_create_date
+msgid "Created on"
+msgstr "Created on"
+
+#. module: bedit_ecoles
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_activity_description
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_school_type_description
+msgid "Description"
+msgstr "Description"
+
+#. module: bedit_ecoles
+#: model:ir.ui.view,arch_db:bedit_ecoles.activity_view_kaban
+msgid "Description :"
+msgstr "Description :"
+
+#. module: bedit_ecoles
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_activity_display_name
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_company_display_name
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_municipality_display_name
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_postcode_display_name
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_school_display_name
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_school_type_display_name
+msgid "Display Name"
+msgstr "Display Name"
+
+#. module: bedit_ecoles
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_activity_id
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_company_id
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_municipality_id
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_postcode_id
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_school_id
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_school_type_id
+msgid "ID"
+msgstr "ID"
+
+#. module: bedit_ecoles
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_activity___last_update
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_company___last_update
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_municipality___last_update
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_postcode___last_update
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_school___last_update
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_school_type___last_update
+msgid "Last Modified on"
+msgstr "Last Modified on"
+
+#. module: bedit_ecoles
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_activity_write_uid
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_company_write_uid
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_municipality_write_uid
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_postcode_write_uid
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_school_type_write_uid
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_school_write_uid
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: bedit_ecoles
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_activity_write_date
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_company_write_date
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_municipality_write_date
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_postcode_write_date
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_school_type_write_date
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_school_write_date
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: bedit_ecoles
+#: model:ir.actions.act_window,name:bedit_ecoles.municipality_list_action
+msgid "Municipalities"
+msgstr "Municipalities"
+
+#. module: bedit_ecoles
+#: model:ir.model,name:bedit_ecoles.model_bedit_ecoles_municipality
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_activity_company_muni
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_activity_school_muni
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_company_municipality_id
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_municipality_name
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_school_municipality_id
+#: model:ir.ui.menu,name:bedit_ecoles.municipality_menu
+#: model:ir.ui.view,arch_db:bedit_ecoles.municipality_view_tree
+msgid "Municipality"
+msgstr "Municipality"
+
+#. module: bedit_ecoles
+#: model:ir.ui.view,arch_db:bedit_ecoles.municipality_view
+msgid "Municipality Form"
+msgstr "Municipality Form"
+
+#. module: bedit_ecoles
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_activity_name
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_company_name
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_school_name
+msgid "Name"
+msgstr "Name"
+
+#. module: bedit_ecoles
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_activity_number
+msgid "Number of participant"
+msgstr "Number of participant"
+
+#. module: bedit_ecoles
+#: model:ir.ui.view,arch_db:bedit_ecoles.activity_view_kaban
+msgid "Number of participant :"
+msgstr "Number of participant :"
+
+#. module: bedit_ecoles
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_company_polnum
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_school_polnum
+msgid "Polnum"
+msgstr "Polnum"
+
+#. module: bedit_ecoles
+#: model:ir.actions.act_window,name:bedit_ecoles.postcode_list_action
+msgid "Postcodes"
+msgstr "Postcodes"
+
+#. module: bedit_ecoles
+#: model:ir.model,name:bedit_ecoles.model_bedit_ecoles_postcode
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_company_postcode_id
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_postcode_name
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_school_postcode_id
+#: model:ir.ui.menu,name:bedit_ecoles.postcode_menu
+#: model:ir.ui.view,arch_db:bedit_ecoles.postcode_view_tree
+msgid "Postcode"
+msgstr "Postcode"
+
+#. module: bedit_ecoles
+#: model:ir.ui.view,arch_db:bedit_ecoles.postcode_view
+msgid "Postcode Form"
+msgstr "Postcode Form"
+
+#. module: bedit_ecoles
+#: model:ir.ui.view,arch_db:bedit_ecoles.activity_form_view
+#: model:ir.ui.view,arch_db:bedit_ecoles.company_form_view
+#: model:ir.ui.view,arch_db:bedit_ecoles.school_form_view
+msgid "Properties"
+msgstr "Properties"
+
+#. module: bedit_ecoles
+#: model:geoengine.vector.layer,name:bedit_ecoles.geoengine_vector_layer_72
+#: model:ir.model,name:bedit_ecoles.model_bedit_ecoles_school
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_activity_school_id
+#: model:ir.ui.menu,name:bedit_ecoles.school_menu
+msgid "School"
+msgstr "School"
+
+#. module: bedit_ecoles
+#: model:ir.ui.view,arch_db:bedit_ecoles.school_form_view
+msgid "School Form"
+msgstr "School Form"
+
+#. module: bedit_ecoles
+#: model:ir.ui.view,arch_db:bedit_ecoles.school_type_view_tree
+msgid "School Type"
+msgstr "School Type"
+
+#. module: bedit_ecoles
+#: model:ir.ui.view,arch_db:bedit_ecoles.school_type_view
+msgid "School Type Form"
+msgstr "School Type Form"
+
+#. module: bedit_ecoles
+#: model:ir.actions.act_window,name:bedit_ecoles.school_type_list_action
+msgid "School Types"
+msgstr "School Types"
+
+#. module: bedit_ecoles
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_school_stype_id
+msgid "School type"
+msgstr "School type"
+
+#. module: bedit_ecoles
+#: model:ir.model,name:bedit_ecoles.model_bedit_ecoles_school_type
+#: model:ir.ui.menu,name:bedit_ecoles.school_type_menu
+msgid "School Type"
+msgstr "School Type"
+
+#. module: bedit_ecoles
+#: model:ir.actions.act_window,name:bedit_ecoles.school_list_action
+msgid "Schools"
+msgstr "Schools"
+
+#. module: bedit_ecoles
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_activity_the_geom
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_company_the_geom
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_school_the_geom
+msgid "The geom"
+msgstr "The geom"
+
+#. module: bedit_ecoles
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_activity_school_type
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_school_type_name
+msgid "Type"
+msgstr "Type"
+
+#. module: bedit_ecoles
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_activity_year
+msgid "Year"
+msgstr "Year"
+
+#. module: bedit_ecoles
+#: model:geoengine.raster.layer,name:bedit_ecoles.geoengine_raster_layer_test0
+#: model:geoengine.raster.layer,name:bedit_ecoles.geoengine_raster_layer_test1
+#: model:geoengine.raster.layer,name:bedit_ecoles.geoengine_raster_layer_test2
+msgid "ZIP OSM"
+msgstr "ZIP OSM"
+
+#. module: bedit_ecoles
+#: model:geoengine.raster.layer,name:bedit_ecoles.geoengine_raster_layer_osm0
+#: model:geoengine.raster.layer,name:bedit_ecoles.geoengine_raster_layer_osm1
+#: model:geoengine.raster.layer,name:bedit_ecoles.geoengine_raster_layer_osm2
+msgid "ZIP OSM Light"
+msgstr "ZIP OSM Light"
+
+#. module: bedit_ecoles
+#: model:geoengine.raster.layer,name:bedit_ecoles.geoengine_raster_layer_basic0
+#: model:geoengine.raster.layer,name:bedit_ecoles.geoengine_raster_layer_basic1
+#: model:geoengine.raster.layer,name:bedit_ecoles.geoengine_raster_layer_basic2
+msgid "basic"
+msgstr "basic"
+
+#. module: bedit_ecoles
+#: model:geoengine.raster.layer,name:bedit_ecoles.geoengine_raster_layer_lb72
+msgid "urbisFR"
+msgstr "urbisFR"
+
+#. module: bedit_ecoles
+#: model:geoengine.raster.layer,name:bedit_ecoles.geoengine_raster_wmslayer_lb72
+msgid "urbisNL"
+msgstr "urbisNL"

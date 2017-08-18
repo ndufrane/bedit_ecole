@@ -88,7 +88,7 @@
         </record>
 
         <record model="ir.actions.act_window" id="postcode_list_action">
-            <field name="name">Post Codes</field>
+            <field name="name">Postcodes</field>
             <field name="res_model">bedit_ecoles.postcode</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
@@ -220,7 +220,7 @@
                             </group>
                         </group>
                         <group col="1">
-                            <group string="Cartographie">
+                            <group string="Cartography">
                                 <field name="the_geom" colspan="4" widget="geo_edit_map"/>
                             </group>
                         </group>
@@ -333,7 +333,7 @@
                             </group>
                         </group>
                         <group col="1">
-                            <group string="Cartographie">
+                            <group string="Cartography">
                                 <field name="the_geom" colspan="4" widget="geo_edit_map"/>
                             </group>
                         </group>

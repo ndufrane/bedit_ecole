@@ -3,11 +3,11 @@
     <data>
 
         <!-- Panel global -->
-        <menuitem id="main_bedit_ecoles_menu" name="Bedit Ecole" web_icon="bedit_ecoles,static/src/img/icon-schools.png"/><!-- Titre -->
+        <menuitem id="main_bedit_ecoles_menu" name="Bedit School" web_icon="bedit_ecoles,static/src/img/icon-schools.png"/><!-- Titre -->
 
         <!-- Menu de gauche -->
 
-        <menuitem id="bedit_ecoles_menu" name="Bedit Ecole"
+        <menuitem id="bedit_ecoles_menu" name="Bedit School"
                 parent="main_bedit_ecoles_menu"/><!-- Menu -->
 
         <menuitem id="activity_menu" name="Activity" parent="bedit_ecoles_menu"
@@ -22,7 +22,7 @@
         <menuitem id="bedit_ecoles_admin"
                   parent="base.menu_administration"
                   sequence="20"
-                  name="Bedit Ecoles Admin"
+                  name="Bedit School Admin"
         />
 
 
@@ -32,7 +32,7 @@
         <menuitem id="postcode_menu" name="Postcode" parent="bedit_ecoles_admin"
                 action="postcode_list_action"/><!-- Sous-Menu -->
 
-        <menuitem id="school_type_menu" name="SchoolType" parent="bedit_ecoles_admin"
+        <menuitem id="school_type_menu" name="School Type" parent="bedit_ecoles_admin"
                 action="school_type_list_action"/><!-- Sous-Menu -->
 
     </data>
