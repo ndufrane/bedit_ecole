@@ -96,7 +96,9 @@ class activity(geo_model.GeoModel):
 
     name = fields.Char(compute='_get_name')
 
+    school_name = fields.Char(related='school_id.name', store=False)
     school_muni = fields.Char(related='school_id.municipality_id.name', store=False)
+    company_name = fields.Char(related='company_id.name', store=False)
     company_muni = fields.Char(related='company_id.municipality_id.name', store=False)
 
     school_type = fields.Char(related='school_id.stype_id.name', store=False)

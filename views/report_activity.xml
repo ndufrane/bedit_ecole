@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+            id="bedit_ecoles_report_activity"
+            model="bedit_ecoles.activity"
+            string="Activity"
+            name="bedit_ecoles.report_activity"
+            file="bedit_ecoles.report_activity"
+            report_type="qweb-html"/>
+
+        <!-- Main template -->
+        <template id="report_activity">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="bedit_ecoles.report_activity_doc" t-lang="request.lang"/>
+                </t>
+            </t>
+        </template>
+
+        <!-- Translatable template -->
+        <template id="report_activity_doc">
+            <t t-set="doc" t-value="doc.with_context({'lang':request.lang})" />
+            <t t-call="report.html_container">
+                <div class="page">
+                    <h1>Report For <t t-esc="doc.name"/></h1>
+                    <table class="table">
+                        <tr>
+                            <th>Year</th>
+                            <th>School</th>
+                            <th>Company</th>
+                            <th>Number</th>
+                        </tr>
+                        <tr>
+                            <td><t t-esc="doc.year"/></td>
+                            <td><t t-esc="doc.school_name"/></td>
+                            <td><t t-esc="doc.company_name"/></td>
+                            <td><t t-esc="doc.number"/></td>
+                        </tr>
+                    </table>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>
