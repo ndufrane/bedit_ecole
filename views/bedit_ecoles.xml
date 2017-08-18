@@ -153,6 +153,18 @@
 
         <!-- company -->
 
+        <record model="ir.ui.view" id="company_view_tree">
+            <field name="name">bedit_ecoles.company.tree</field>
+            <field name="model">bedit_ecoles.company</field>
+            <field name="arch" type="xml">
+                <tree string="Company">
+                    <field name="name"/>
+                    <field name="address"/>
+                    <field name="polnum"/>
+                </tree>
+            </field>
+        </record>
+
         <!-- Visualisation des companies -->
         <record model="ir.ui.view" id="company_view_kanban">
             <field name="name">bedit_ecoles.company.kanban</field>
@@ -233,7 +245,7 @@
             <field name="name">Companies</field>
             <field name="res_model">bedit_ecoles.company</field>
             <field name="view_type">form</field>
-            <field name="view_mode">kanban,form,geoengine</field>
+            <field name="view_mode">kanban,tree,form,geoengine</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">Create first company</p><!-- Si pas de données messages d'info -->
             </field>
@@ -256,13 +268,32 @@
         <record model="ir.actions.act_window.view" id="act_company_geo_view">
             <field eval="3" name="sequence"/>
             <field name="view_mode">geoengine</field>
-            <field name="view_id" ref="ir_ui_view_companygeoview0"/>
+            <field name="view_id" ref="ir_ui_view_companygeoview"/>
+            <field name="act_window_id" ref="company_list_action"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_company_tree_view">
+            <field eval="3" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="company_view_tree"/>
             <field name="act_window_id" ref="company_list_action"/>
         </record>
 
 
-
         <!-- school -->
+        <record model="ir.ui.view" id="school_view_tree">
+            <field name="name">bedit_ecoles.school.tree</field>
+            <field name="model">bedit_ecoles.school</field>
+            <field name="arch" type="xml">
+                <tree string="Schools">
+                    <field name="name"/>
+                    <field name="address"/>
+                    <field name="polnum"/>
+                    <field name="postcode_id"/>
+                    <field name="municipality_id"/>
+                </tree>
+            </field>
+        </record>
 
         <!-- Visualisation des schools -->
         <record model="ir.ui.view" id="school_view_kanban">
@@ -369,10 +400,16 @@
         <record model="ir.actions.act_window.view" id="act_school_geo_view">
             <field eval="3" name="sequence"/>
             <field name="view_mode">geoengine</field>
-            <field name="view_id" ref="ir_ui_view_schoolgeoview1"/>
+            <field name="view_id" ref="ir_ui_view_schoolgeoview"/>
             <field name="act_window_id" ref="school_list_action"/>
         </record>
 
+        <record model="ir.actions.act_window.view" id="act_school_form_view">
+            <field eval="4" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="school_view_tree"/>
+            <field name="act_window_id" ref="school_list_action"/>
+        </record>
 
         <!-- activity -->
 
@@ -381,7 +418,7 @@
             <field name="name">bedit_ecoles.activity.tree</field>
             <field name="model">bedit_ecoles.activity</field>
             <field name="arch" type="xml">
-                <tree string="Activities">
+                <tree string="Activities" default_order="name">
                     <field name="name"/>
                     <field name="description"/>
                     <field name="number"/>
@@ -412,6 +449,9 @@
                                         <li>
                                             <t t-if="record.number.raw_value">Number of participant : <field name="number"/></t>
                                         </li>
+                                        <li>
+                                            <t t-if="record.school_muni.raw_value">Municipality : <field name="school_muni"/></t>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -430,7 +470,6 @@
                     <field name="description"/>
                     <field name="year"/>
                     <field name="school_id"/>
-                    <field name="school_muni"/>
                     <field name="school_type"/>
                     <field name="company_id"/>
                     <field name="school_muni"/>
@@ -477,7 +516,7 @@
         <record model="ir.actions.act_window.view" id="act_activity_geo_view">
             <field eval="3" name="sequence"/>
             <field name="view_mode">geoengine</field>
-            <field name="view_id" ref="ir_ui_view_activitygeoview2"/>
+            <field name="view_id" ref="ir_ui_view_activitygeoview"/>
             <field name="act_window_id" ref="activity_list_action"/>
         </record>
 

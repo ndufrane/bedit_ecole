@@ -41,9 +41,7 @@ class company(geo_model.GeoModel):
     name = fields.Char(string='Name',required=True)
     address = fields.Char(string='Address', required=False)
     polnum = fields.Char(string='Polnum', required=False)
-
     the_geom =  geo_fields.GeoPoint(required=True, srid=31370, gist_index=True)
-
     postcode_id = fields.Many2one('bedit_ecoles.postcode', string="Postcode")
     municipality_id = fields.Many2one('bedit_ecoles.municipality', string="Municipality")
 
@@ -53,7 +51,7 @@ class school(geo_model.GeoModel):
     _description = 'School'
 
     name = fields.Char(string='Name',required=True)
-    address = fields.Char(string='Address', required=False)
+    address = fields.Char(string='Address', required=True)
     polnum = fields.Char(string='Polnum', required=False)
 
     the_geom =  geo_fields.GeoPoint(required=True, srid=31370, gist_index=True)
