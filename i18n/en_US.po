@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0-20170807\n"
+"Project-Id-Version: Odoo Server 10.0-20170207\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-16 12:22+0000\n"
-"PO-Revision-Date: 2017-08-16 12:22+0000\n"
+"POT-Creation-Date: 2017-08-18 11:38+0000\n"
+"PO-Revision-Date: 2017-08-18 11:38+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -22,6 +22,7 @@ msgid "Activities"
 msgstr "Activities"
 
 #. module: bedit_ecoles
+#: model:ir.actions.report.xml,name:bedit_ecoles.bedit_ecoles_report_activity
 #: model:ir.model,name:bedit_ecoles.model_bedit_ecoles_activity
 #: model:ir.ui.menu,name:bedit_ecoles.activity_menu
 msgid "Activity"
@@ -89,6 +90,7 @@ msgstr "Companies"
 #: model:ir.model,name:bedit_ecoles.model_bedit_ecoles_company
 #: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_activity_company_id
 #: model:ir.ui.menu,name:bedit_ecoles.company_menu
+#: model:ir.ui.view,arch_db:bedit_ecoles.report_activity_doc
 msgid "Company"
 msgstr "Company"
 
@@ -231,11 +233,18 @@ msgid "Municipality Form"
 msgstr "Municipality Form"
 
 #. module: bedit_ecoles
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_activity_company_name
 #: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_activity_name
+#: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_activity_school_name
 #: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_company_name
 #: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_school_name
 msgid "Name"
 msgstr "Name"
+
+#. module: bedit_ecoles
+#: model:ir.ui.view,arch_db:bedit_ecoles.report_activity_doc
+msgid "Number"
+msgstr "Number"
 
 #. module: bedit_ecoles
 #: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_activity_number
@@ -254,11 +263,6 @@ msgid "Polnum"
 msgstr "Polnum"
 
 #. module: bedit_ecoles
-#: model:ir.actions.act_window,name:bedit_ecoles.postcode_list_action
-msgid "Postcodes"
-msgstr "Postcodes"
-
-#. module: bedit_ecoles
 #: model:ir.model,name:bedit_ecoles.model_bedit_ecoles_postcode
 #: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_company_postcode_id
 #: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_postcode_name
@@ -274,6 +278,11 @@ msgid "Postcode Form"
 msgstr "Postcode Form"
 
 #. module: bedit_ecoles
+#: model:ir.actions.act_window,name:bedit_ecoles.postcode_list_action
+msgid "Postcodes"
+msgstr "Postcodes"
+
+#. module: bedit_ecoles
 #: model:ir.ui.view,arch_db:bedit_ecoles.activity_form_view
 #: model:ir.ui.view,arch_db:bedit_ecoles.company_form_view
 #: model:ir.ui.view,arch_db:bedit_ecoles.school_form_view
@@ -281,10 +290,16 @@ msgid "Properties"
 msgstr "Properties"
 
 #. module: bedit_ecoles
+#: model:ir.ui.view,arch_db:bedit_ecoles.report_activity_doc
+msgid "Report For"
+msgstr "Report For"
+
+#. module: bedit_ecoles
 #: model:geoengine.vector.layer,name:bedit_ecoles.geoengine_vector_layer_72
 #: model:ir.model,name:bedit_ecoles.model_bedit_ecoles_school
 #: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_activity_school_id
 #: model:ir.ui.menu,name:bedit_ecoles.school_menu
+#: model:ir.ui.view,arch_db:bedit_ecoles.report_activity_doc
 msgid "School"
 msgstr "School"
 
@@ -294,6 +309,7 @@ msgid "School Form"
 msgstr "School Form"
 
 #. module: bedit_ecoles
+#: model:ir.ui.menu,name:bedit_ecoles.school_type_menu
 #: model:ir.ui.view,arch_db:bedit_ecoles.school_type_view_tree
 msgid "School Type"
 msgstr "School Type"
@@ -315,9 +331,8 @@ msgstr "School type"
 
 #. module: bedit_ecoles
 #: model:ir.model,name:bedit_ecoles.model_bedit_ecoles_school_type
-#: model:ir.ui.menu,name:bedit_ecoles.school_type_menu
-msgid "School Type"
-msgstr "School Type"
+msgid "SchoolType"
+msgstr "SchoolType"
 
 #. module: bedit_ecoles
 #: model:ir.actions.act_window,name:bedit_ecoles.school_list_action
@@ -339,6 +354,7 @@ msgstr "Type"
 
 #. module: bedit_ecoles
 #: model:ir.model.fields,field_description:bedit_ecoles.field_bedit_ecoles_activity_year
+#: model:ir.ui.view,arch_db:bedit_ecoles.report_activity_doc
 msgid "Year"
 msgstr "Year"
 
